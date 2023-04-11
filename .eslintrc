@@ -1,0 +1,30 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "eslint-plugin-prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "eslint-config-prettier"
+  ],
+  "parserOptions": {"ecmaVersion": 2018, "sourceType": "module"},
+  "rules": {
+    "import/extensions": "off",
+    "no-undef": "off",
+    "quotes": ["error", "single"],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "import/no-unresolved": "off",
+    "consistent-return": "off",
+    "prettier/prettier": "error",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
+    "no-throw-literal": "off",
+    "no-underscore-dangle": "off",
+    "no-plusplus": "off",
+    "no-case-declarations": "off"
+  },
+  "root": true
+}

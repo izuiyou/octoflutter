@@ -1,0 +1,27 @@
+{
+  "name": "@octoflutter/dartsdk",
+  "version": "0.9.0",
+  "description": "dartsdk is a replactment of dart packages used by flutter, such as dart:ui, dart:math and so on.",
+  "main": "index.ts",
+  "sideEffects": false,
+  "author": "zuiyou",
+  "license": "BSD",
+  "scripts": {
+    "lint": "eslint --fix ./src --ext .ts",
+    "build": "tsc",
+    "dev": "run-s lint build"
+  },
+  "eslintIgnore": [
+    "types.d.ts"
+  ],
+  "homepage": "https://octoflutter.izuiyou.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/izuiyou/octoflutter.git",
+    "directory": "packages/dartsdk"
+  },
+  "keywords": [
+    "octoflutter",
+    "dartsdk"
+  ]
+}

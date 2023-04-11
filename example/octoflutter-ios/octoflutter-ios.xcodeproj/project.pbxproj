@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA0AFA3E29DECA3800CBF1E5 /* OFRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0AFA3D29DECA3800CBF1E5 /* OFRouter.m */; };
+		AA46330929C1C5EE00F005D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA46330829C1C5EE00F005D1 /* AppDelegate.m */; };
+		AA46330F29C1C5EE00F005D1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA46330E29C1C5EE00F005D1 /* ViewController.m */; };
+		AA46331229C1C5EE00F005D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA46331029C1C5EE00F005D1 /* Main.storyboard */; };
+		AA46331429C1C5EF00F005D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA46331329C1C5EF00F005D1 /* Assets.xcassets */; };
+		AA46331729C1C5EF00F005D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA46331529C1C5EF00F005D1 /* LaunchScreen.storyboard */; };
+		AA46331A29C1C5EF00F005D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA46331929C1C5EF00F005D1 /* main.m */; };
+		AA46333429C1CB1400F005D1 /* OFAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AA46332929C1CB1400F005D1 /* OFAppInfo.m */; };
+		AA46333629C1CB1400F005D1 /* OFAssetLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = AA46332B29C1CB1400F005D1 /* OFAssetLoader.m */; };
+		AA46333729C1CB1400F005D1 /* OFFrameworkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AA46332C29C1CB1400F005D1 /* OFFrameworkInfo.m */; };
+		AA46333829C1CB1400F005D1 /* OFAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA46332E29C1CB1400F005D1 /* OFAppViewController.m */; };
+		AA46333929C1CB1400F005D1 /* OFAppContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA46332F29C1CB1400F005D1 /* OFAppContainerController.m */; };
+		AA46333A29C1CB1400F005D1 /* OFOpenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA46333029C1CB1400F005D1 /* OFOpenManager.m */; };
+		AA46333D29C1D01E00F005D1 /* OFRemoteLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA46333C29C1D01E00F005D1 /* OFRemoteLoadViewController.m */; };
+		AA46334029C1E3FA00F005D1 /* OctoAssets in Resources */ = {isa = PBXBuildFile; fileRef = AA46333F29C1E3FA00F005D1 /* OctoAssets */; };
+		AA46334629C2B21900F005D1 /* OFMCHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = AA46334429C2B21900F005D1 /* OFMCHttp.m */; };
+		AA46334929C2B29800F005D1 /* OFMCBase.m in Sources */ = {isa = PBXBuildFile; fileRef = AA46334829C2B29800F005D1 /* OFMCBase.m */; };
+		AA9ADEA129C860C70080CE89 /* FrameUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9ADE9B29C860C70080CE89 /* FrameUpdater.m */; };
+		AA9ADEA229C860C70080CE89 /* VideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9ADE9E29C860C70080CE89 /* VideoPlayer.m */; };
+		AA9ADEA329C860C70080CE89 /* VideoMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9ADEA029C860C70080CE89 /* VideoMessages.m */; };
+		AAF5BD9F29C43F260017DF1A /* OFAppBundleMCVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF5BD9D29C43F260017DF1A /* OFAppBundleMCVideo.m */; };
+		AAF5BDA229C440670017DF1A /* OctoFlutter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF5BDA029C4405F0017DF1A /* OctoFlutter.framework */; };
+		AAF5BDA329C440670017DF1A /* OctoFlutter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAF5BDA029C4405F0017DF1A /* OctoFlutter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AAF5BDA729C443470017DF1A /* OFPlatformViewTestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF5BDA629C443470017DF1A /* OFPlatformViewTestFactory.m */; };
+		AAF5BDAA29C443580017DF1A /* OFPlatformViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF5BDA929C443580017DF1A /* OFPlatformViewTest.m */; };
+		BA50B5D7499F0394E28345F7 /* Pods_octoflutter_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FF67167E1A8693ADCAFD3F /* Pods_octoflutter_ios.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AA46332429C1C72600F005D1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AAF5BDA329C440670017DF1A /* OctoFlutter.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8B9B6B262942B80FAC689137 /* Pods-octoflutter-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-octoflutter-ios.release.xcconfig"; path = "Target Support Files/Pods-octoflutter-ios/Pods-octoflutter-ios.release.xcconfig"; sourceTree = "<group>"; };
+		AA0AFA3C29DECA3800CBF1E5 /* OFRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OFRouter.h; sourceTree = "<group>"; };
+		AA0AFA3D29DECA3800CBF1E5 /* OFRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OFRouter.m; sourceTree = "<group>"; };
+		AA46330429C1C5EE00F005D1 /* octoflutter-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "octoflutter-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA46330729C1C5EE00F005D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AA46330829C1C5EE00F005D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AA46330D29C1C5EE00F005D1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AA46330E29C1C5EE00F005D1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AA46331129C1C5EE00F005D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AA46331329C1C5EF00F005D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA46331629C1C5EF00F005D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AA46331829C1C5EF00F005D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA46331929C1C5EF00F005D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AA46332629C1CB1400F005D1 /* OFOpenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFOpenManager.h; sourceTree = "<group>"; };
+		AA46332729C1CB1400F005D1 /* OFAppContainerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFAppContainerController.h; sourceTree = "<group>"; };
+		AA46332829C1CB1400F005D1 /* OFAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFAppViewController.h; sourceTree = "<group>"; };
+		AA46332929C1CB1400F005D1 /* OFAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFAppInfo.m; sourceTree = "<group>"; };
+		AA46332B29C1CB1400F005D1 /* OFAssetLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFAssetLoader.m; sourceTree = "<group>"; };
+		AA46332C29C1CB1400F005D1 /* OFFrameworkInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFFrameworkInfo.m; sourceTree = "<group>"; };
+		AA46332D29C1CB1400F005D1 /* OFAppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFAppInfo.h; sourceTree = "<group>"; };
+		AA46332E29C1CB1400F005D1 /* OFAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFAppViewController.m; sourceTree = "<group>"; };
+		AA46332F29C1CB1400F005D1 /* OFAppContainerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFAppContainerController.m; sourceTree = "<group>"; };
+		AA46333029C1CB1400F005D1 /* OFOpenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFOpenManager.m; sourceTree = "<group>"; };
+		AA46333129C1CB1400F005D1 /* OFAssetLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFAssetLoader.h; sourceTree = "<group>"; };
+		AA46333329C1CB1400F005D1 /* OFFrameworkInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFFrameworkInfo.h; sourceTree = "<group>"; };
+		AA46333B29C1D01E00F005D1 /* OFRemoteLoadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OFRemoteLoadViewController.h; sourceTree = "<group>"; };
+		AA46333C29C1D01E00F005D1 /* OFRemoteLoadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OFRemoteLoadViewController.m; sourceTree = "<group>"; };
+		AA46333F29C1E3FA00F005D1 /* OctoAssets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OctoAssets; sourceTree = "<group>"; };
+		AA46334429C2B21900F005D1 /* OFMCHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFMCHttp.m; sourceTree = "<group>"; };
+		AA46334529C2B21900F005D1 /* OFMCHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFMCHttp.h; sourceTree = "<group>"; };
+		AA46334729C2B29800F005D1 /* OFMCBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFMCBase.h; sourceTree = "<group>"; };
+		AA46334829C2B29800F005D1 /* OFMCBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFMCBase.m; sourceTree = "<group>"; };
+		AA9ADE9B29C860C70080CE89 /* FrameUpdater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameUpdater.m; sourceTree = "<group>"; };
+		AA9ADE9C29C860C70080CE89 /* VideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayer.h; sourceTree = "<group>"; };
+		AA9ADE9D29C860C70080CE89 /* VideoMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoMessages.h; sourceTree = "<group>"; };
+		AA9ADE9E29C860C70080CE89 /* VideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayer.m; sourceTree = "<group>"; };
+		AA9ADE9F29C860C70080CE89 /* FrameUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameUpdater.h; sourceTree = "<group>"; };
+		AA9ADEA029C860C70080CE89 /* VideoMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoMessages.m; sourceTree = "<group>"; };
+		AAF5BD9D29C43F260017DF1A /* OFAppBundleMCVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFAppBundleMCVideo.m; sourceTree = "<group>"; };
+		AAF5BD9E29C43F260017DF1A /* OFAppBundleMCVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFAppBundleMCVideo.h; sourceTree = "<group>"; };
+		AAF5BDA029C4405F0017DF1A /* OctoFlutter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OctoFlutter.framework; sourceTree = "<group>"; };
+		AAF5BDA529C443470017DF1A /* OFPlatformViewTestFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OFPlatformViewTestFactory.h; sourceTree = "<group>"; };
+		AAF5BDA629C443470017DF1A /* OFPlatformViewTestFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OFPlatformViewTestFactory.m; sourceTree = "<group>"; };
+		AAF5BDA829C443580017DF1A /* OFPlatformViewTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OFPlatformViewTest.h; sourceTree = "<group>"; };
+		AAF5BDA929C443580017DF1A /* OFPlatformViewTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OFPlatformViewTest.m; sourceTree = "<group>"; };
+		C73FB8E3116E1F178DA3D59B /* Pods-octoflutter-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-octoflutter-ios.debug.xcconfig"; path = "Target Support Files/Pods-octoflutter-ios/Pods-octoflutter-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		D4FF67167E1A8693ADCAFD3F /* Pods_octoflutter_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_octoflutter_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA46330129C1C5EE00F005D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAF5BDA229C440670017DF1A /* OctoFlutter.framework in Frameworks */,
+				BA50B5D7499F0394E28345F7 /* Pods_octoflutter_ios.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6DB2AAF9CA080977778E0770 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4FF67167E1A8693ADCAFD3F /* Pods_octoflutter_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7364FCE05DD6210967D3E61F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C73FB8E3116E1F178DA3D59B /* Pods-octoflutter-ios.debug.xcconfig */,
+				8B9B6B262942B80FAC689137 /* Pods-octoflutter-ios.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AA4632FB29C1C5EE00F005D1 = {
+			isa = PBXGroup;
+			children = (
+				AA46330629C1C5EE00F005D1 /* octoflutter-ios */,
+				AA46330529C1C5EE00F005D1 /* Products */,
+				7364FCE05DD6210967D3E61F /* Pods */,
+				6DB2AAF9CA080977778E0770 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AA46330529C1C5EE00F005D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA46330429C1C5EE00F005D1 /* octoflutter-ios.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA46330629C1C5EE00F005D1 /* octoflutter-ios */ = {
+			isa = PBXGroup;
+			children = (
+				AAF5BDA029C4405F0017DF1A /* OctoFlutter.framework */,
+				AA46330729C1C5EE00F005D1 /* AppDelegate.h */,
+				AA46330829C1C5EE00F005D1 /* AppDelegate.m */,
+				AA46330D29C1C5EE00F005D1 /* ViewController.h */,
+				AA46330E29C1C5EE00F005D1 /* ViewController.m */,
+				AA46333F29C1E3FA00F005D1 /* OctoAssets */,
+				AA46332529C1CB1400F005D1 /* OctoLoad */,
+				AA46334129C2B21900F005D1 /* OctoChannels */,
+				AAF5BDA429C442F20017DF1A /* OctoPlatformView */,
+				AA46331029C1C5EE00F005D1 /* Main.storyboard */,
+				AA46331329C1C5EF00F005D1 /* Assets.xcassets */,
+				AA46331529C1C5EF00F005D1 /* LaunchScreen.storyboard */,
+				AA46331829C1C5EF00F005D1 /* Info.plist */,
+				AA46331929C1C5EF00F005D1 /* main.m */,
+			);
+			path = "octoflutter-ios";
+			sourceTree = "<group>";
+		};
+		AA46332529C1CB1400F005D1 /* OctoLoad */ = {
+			isa = PBXGroup;
+			children = (
+				AA46332729C1CB1400F005D1 /* OFAppContainerController.h */,
+				AA46332F29C1CB1400F005D1 /* OFAppContainerController.m */,
+				AA46332D29C1CB1400F005D1 /* OFAppInfo.h */,
+				AA46332929C1CB1400F005D1 /* OFAppInfo.m */,
+				AA46332829C1CB1400F005D1 /* OFAppViewController.h */,
+				AA46332E29C1CB1400F005D1 /* OFAppViewController.m */,
+				AA46333129C1CB1400F005D1 /* OFAssetLoader.h */,
+				AA46332B29C1CB1400F005D1 /* OFAssetLoader.m */,
+				AA46333329C1CB1400F005D1 /* OFFrameworkInfo.h */,
+				AA46332C29C1CB1400F005D1 /* OFFrameworkInfo.m */,
+				AA46332629C1CB1400F005D1 /* OFOpenManager.h */,
+				AA46333029C1CB1400F005D1 /* OFOpenManager.m */,
+				AA46333B29C1D01E00F005D1 /* OFRemoteLoadViewController.h */,
+				AA46333C29C1D01E00F005D1 /* OFRemoteLoadViewController.m */,
+			);
+			path = OctoLoad;
+			sourceTree = "<group>";
+		};
+		AA46334129C2B21900F005D1 /* OctoChannels */ = {
+			isa = PBXGroup;
+			children = (
+				AA46334229C2B21900F005D1 /* AppBundleChannels */,
+				AA46334329C2B21900F005D1 /* MethodChannel */,
+			);
+			path = OctoChannels;
+			sourceTree = "<group>";
+		};
+		AA46334229C2B21900F005D1 /* AppBundleChannels */ = {
+			isa = PBXGroup;
+			children = (
+				AA9ADE9A29C860C70080CE89 /* Video */,
+				AAF5BD9E29C43F260017DF1A /* OFAppBundleMCVideo.h */,
+				AAF5BD9D29C43F260017DF1A /* OFAppBundleMCVideo.m */,
+			);
+			path = AppBundleChannels;
+			sourceTree = "<group>";
+		};
+		AA46334329C2B21900F005D1 /* MethodChannel */ = {
+			isa = PBXGroup;
+			children = (
+				AA46334729C2B29800F005D1 /* OFMCBase.h */,
+				AA46334829C2B29800F005D1 /* OFMCBase.m */,
+				AA46334529C2B21900F005D1 /* OFMCHttp.h */,
+				AA46334429C2B21900F005D1 /* OFMCHttp.m */,
+				AA0AFA3C29DECA3800CBF1E5 /* OFRouter.h */,
+				AA0AFA3D29DECA3800CBF1E5 /* OFRouter.m */,
+			);
+			path = MethodChannel;
+			sourceTree = "<group>";
+		};
+		AA9ADE9A29C860C70080CE89 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				AA9ADE9F29C860C70080CE89 /* FrameUpdater.h */,
+				AA9ADE9B29C860C70080CE89 /* FrameUpdater.m */,
+				AA9ADE9D29C860C70080CE89 /* VideoMessages.h */,
+				AA9ADEA029C860C70080CE89 /* VideoMessages.m */,
+				AA9ADE9C29C860C70080CE89 /* VideoPlayer.h */,
+				AA9ADE9E29C860C70080CE89 /* VideoPlayer.m */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		AAF5BDA429C442F20017DF1A /* OctoPlatformView */ = {
+			isa = PBXGroup;
+			children = (
+				AAF5BDA829C443580017DF1A /* OFPlatformViewTest.h */,
+				AAF5BDA929C443580017DF1A /* OFPlatformViewTest.m */,
+				AAF5BDA529C443470017DF1A /* OFPlatformViewTestFactory.h */,
+				AAF5BDA629C443470017DF1A /* OFPlatformViewTestFactory.m */,
+			);
+			path = OctoPlatformView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA46330329C1C5EE00F005D1 /* octoflutter-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA46331D29C1C5EF00F005D1 /* Build configuration list for PBXNativeTarget "octoflutter-ios" */;
+			buildPhases = (
+				097EABCBB4C14AD40569210F /* [CP] Check Pods Manifest.lock */,
+				AA46330029C1C5EE00F005D1 /* Sources */,
+				AA46330129C1C5EE00F005D1 /* Frameworks */,
+				AA46330229C1C5EE00F005D1 /* Resources */,
+				AA46332429C1C72600F005D1 /* Embed Frameworks */,
+				C557113F9EA2336B57756FEF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "octoflutter-ios";
+			productName = "octoflutter-ios";
+			productReference = AA46330429C1C5EE00F005D1 /* octoflutter-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA4632FC29C1C5EE00F005D1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					AA46330329C1C5EE00F005D1 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = AA4632FF29C1C5EE00F005D1 /* Build configuration list for PBXProject "octoflutter-ios" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA4632FB29C1C5EE00F005D1;
+			productRefGroup = AA46330529C1C5EE00F005D1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA46330329C1C5EE00F005D1 /* octoflutter-ios */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA46330229C1C5EE00F005D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA46331729C1C5EF00F005D1 /* LaunchScreen.storyboard in Resources */,
+				AA46331429C1C5EF00F005D1 /* Assets.xcassets in Resources */,
+				AA46334029C1E3FA00F005D1 /* OctoAssets in Resources */,
+				AA46331229C1C5EE00F005D1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		097EABCBB4C14AD40569210F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-octoflutter-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C557113F9EA2336B57756FEF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-octoflutter-ios/Pods-octoflutter-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-octoflutter-ios/Pods-octoflutter-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-octoflutter-ios/Pods-octoflutter-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA46330029C1C5EE00F005D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA9ADEA129C860C70080CE89 /* FrameUpdater.m in Sources */,
+				AAF5BDAA29C443580017DF1A /* OFPlatformViewTest.m in Sources */,
+				AA46333429C1CB1400F005D1 /* OFAppInfo.m in Sources */,
+				AA46330F29C1C5EE00F005D1 /* ViewController.m in Sources */,
+				AA46333629C1CB1400F005D1 /* OFAssetLoader.m in Sources */,
+				AA46330929C1C5EE00F005D1 /* AppDelegate.m in Sources */,
+				AA46334629C2B21900F005D1 /* OFMCHttp.m in Sources */,
+				AAF5BD9F29C43F260017DF1A /* OFAppBundleMCVideo.m in Sources */,
+				AA46333A29C1CB1400F005D1 /* OFOpenManager.m in Sources */,
+				AA46334929C2B29800F005D1 /* OFMCBase.m in Sources */,
+				AA46331A29C1C5EF00F005D1 /* main.m in Sources */,
+				AA46333829C1CB1400F005D1 /* OFAppViewController.m in Sources */,
+				AA9ADEA329C860C70080CE89 /* VideoMessages.m in Sources */,
+				AA0AFA3E29DECA3800CBF1E5 /* OFRouter.m in Sources */,
+				AA46333929C1CB1400F005D1 /* OFAppContainerController.m in Sources */,
+				AA46333729C1CB1400F005D1 /* OFFrameworkInfo.m in Sources */,
+				AA46333D29C1D01E00F005D1 /* OFRemoteLoadViewController.m in Sources */,
+				AAF5BDA729C443470017DF1A /* OFPlatformViewTestFactory.m in Sources */,
+				AA9ADEA229C860C70080CE89 /* VideoPlayer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AA46331029C1C5EE00F005D1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA46331129C1C5EE00F005D1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AA46331529C1C5EF00F005D1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA46331629C1C5EF00F005D1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AA46331B29C1C5EF00F005D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AA46331C29C1C5EF00F005D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA46331E29C1C5EF00F005D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C73FB8E3116E1F178DA3D59B /* Pods-octoflutter-ios.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S4NWU843M5;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/octoflutter-ios",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "octoflutter-ios/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "octoflutter-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
+			};
+			name = Debug;
+		};
+		AA46331F29C1C5EF00F005D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B9B6B262942B80FAC689137 /* Pods-octoflutter-ios.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S4NWU843M5;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/octoflutter-ios",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "octoflutter-ios/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "octoflutter-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA4632FF29C1C5EE00F005D1 /* Build configuration list for PBXProject "octoflutter-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA46331B29C1C5EF00F005D1 /* Debug */,
+				AA46331C29C1C5EF00F005D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA46331D29C1C5EF00F005D1 /* Build configuration list for PBXNativeTarget "octoflutter-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA46331E29C1C5EF00F005D1 /* Debug */,
+				AA46331F29C1C5EF00F005D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA4632FC29C1C5EE00F005D1 /* Project object */;
+}

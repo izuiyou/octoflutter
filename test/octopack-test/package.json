@@ -1,0 +1,35 @@
+{
+  "name": "@octoflutter/octopack-test",
+  "version": "0.9.0",
+  "description": "octopack-test",
+  "main": "index.ts",
+  "sideEffects": false,
+  "author": "zuiyou",
+  "license": "BSD",
+  "scripts": {
+    "lint": "eslint --fix ./src --ext .ts",
+    "build": "tsc",
+    "dev": "run-s lint build",
+    "dw": "octoflutter dev",
+    "dm": "NODE_ENV=production W2DISK=true BUILD_FOR_MOBILE=true octoflutter dev"
+  },
+  "eslintIgnore": [
+    "types.d.ts"
+  ],
+  "dependencies": {
+    "@octoflutter/dartsdk": "workspace:../../packages/dartsdk",
+    "@octoflutter/flutter": "workspace:../../packages/flutter",
+    "@octoflutter/octo": "workspace:../../packages/octo",
+    "@octoflutter/flare": "workspace:../../octopack/flare",
+    "@octoflutter/lottie": "workspace:../../octopack/lottie",
+    "@octoflutter/photo": "workspace:../../octopack/photo",
+    "@octoflutter/picker": "workspace:../../octopack/picker",
+    "@octoflutter/refresh": "workspace:../../octopack/refresh"
+  },
+  "devDependencies": {
+    "@octoflutter/cli": "workspace:../../bin/cli"
+  },
+  "octo": {
+    "assets": "./assets"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "sideEffects": false,
+  "author": "",
+  "license": "BSD",
+  "scripts": {
+    "dw": "octoflutter dev",
+    "dm": "NODE_ENV=production W2DISK=true BUILD_FOR_MOBILE=true octoflutter dev"
+  },
+  "eslintIgnore": [
+    "types.d.ts"
+  ],
+  "dependencies": {
+    "@octoflutter/dartsdk": "0.9.0",
+    "@octoflutter/flutter": "0.9.0"
+  },
+  "octo": {
+    "assets": "./assets"
+  }
+}

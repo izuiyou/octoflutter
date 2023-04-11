@@ -1,0 +1,31 @@
+{
+  "name": "@octoflutter/flare",
+  "version": "0.9.0",
+  "description": "flare",
+  "main": "index.ts",
+  "sideEffects": false,
+  "author": "zuiyou",
+  "license": "BSD",
+  "scripts": {
+    "lint": "eslint --fix ./src --ext .ts",
+    "build": "tsc",
+    "dev": "run-s lint build"
+  },
+  "eslintIgnore": [
+    "types.d.ts"
+  ],
+  "devDependencies": {
+    "@octoflutter/dartsdk": "workspace:../../packages/dartsdk",
+    "@octoflutter/flutter": "workspace:../../packages/flutter"
+  },
+  "homepage": "https://octoflutter.izuiyou.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/izuiyou/octoflutter.git",
+    "directory": "octopack/flare"
+  },
+  "keywords": [
+    "octoflutter",
+    "flare"
+  ]
+}

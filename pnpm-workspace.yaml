@@ -1,0 +1,7 @@
+packages:
+  - 'packages/*'
+  - 'octopack/*'
+  - 'bin/*'
+  - 'benchmark/*'
+  - 'test/*'
+  - 'example/octoflutter-appbundle'

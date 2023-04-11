@@ -1,0 +1,30 @@
+{
+  "name": "@octoflutter/cli-test",
+  "version": "0.9.0",
+  "description": "cli-test",
+  "main": "index.ts",
+  "sideEffects": false,
+  "author": "zuiyou",
+  "license": "BSD",
+  "scripts": {
+    "lint": "eslint --fix ./src --ext .ts",
+    "build": "tsc",
+    "dev": "run-s lint build",
+    "dw": "octoflutter dev",
+    "dm": "NODE_ENV=production W2DISK=true BUILD_FOR_MOBILE=true octoflutter dev",
+    "dh": "RENDER_MODE=html octoflutter dev"
+  },
+  "eslintIgnore": [
+    "types.d.ts"
+  ],
+  "dependencies": {
+    "@octoflutter/dartsdk": "workspace:../../packages/dartsdk",
+    "@octoflutter/flutter": "workspace:../../packages/flutter"
+  },
+  "devDependencies": {
+    "@octoflutter/cli": "workspace:../cli"
+  },
+  "octo": {
+    "assets": "./assets"
+  }
+}
