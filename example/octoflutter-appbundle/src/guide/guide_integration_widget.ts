@@ -11,7 +11,7 @@ import {
   WidgetSpan,
 } from '@octoflutter/flutter'
 import {
-  kGitHubUrl,
+  kGitHubFilePrefix,
   kHoverTextColor,
   kSize14,
   kSize16,
@@ -56,7 +56,7 @@ export function androidIntegration() {
                 ),
                 onTap: () => {
                   RouterPlugin.open(
-                    kGitHubUrl + '/artifact/android/octoflutter.jar'
+                    kGitHubFilePrefix + '/artifact/android/octoflutter.jar'
                   )
                 },
               }),
@@ -77,7 +77,7 @@ export function androidIntegration() {
                 ),
                 onTap: () => {
                   RouterPlugin.open(
-                    kGitHubUrl +
+                    kGitHubFilePrefix +
                       '/example/octoflutter-android/support/src/main/java/com/example/support/FrescoImageProvider.java'
                   )
                 },
@@ -100,7 +100,7 @@ export function androidIntegration() {
                 ),
                 onTap: () => {
                   RouterPlugin.open(
-                    kGitHubUrl +
+                    kGitHubFilePrefix +
                       '/example/octoflutter-android/support/src/main/java/com/example/support/local/LocalAndRemoteAmbientImpl.java'
                   )
                 },
@@ -123,7 +123,7 @@ export function androidIntegration() {
                 ),
                 onTap: () => {
                   RouterPlugin.open(
-                    kGitHubUrl +
+                    kGitHubFilePrefix +
                       '/example/octoflutter-android/support/src/main/java/com/example/support/AppBundleSupportImpl.java'
                   )
                 },
@@ -146,7 +146,7 @@ export function androidIntegration() {
                 ),
                 onTap: () => {
                   RouterPlugin.open(
-                    kGitHubUrl +
+                    kGitHubFilePrefix +
                       '/example/octoflutter-android/app/src/main/java/example/octoflutter/AppBundleActivity.kt'
                   )
                 },
@@ -168,7 +168,7 @@ export function androidIntegration() {
                 ),
                 onTap: () => {
                   RouterPlugin.open(
-                    kGitHubUrl +
+                    kGitHubFilePrefix +
                       '/example/octoflutter-android/support/src/main/java/com/example/support/AppBundleDevSupplier.java'
                   )
                 },
@@ -257,7 +257,7 @@ export function iosIntegration() {
                 }),
                 onTap: () => {
                   RouterPlugin.open(
-                    kGitHubUrl + '/artifact/ios/OctoFlutter.framework'
+                    kGitHubFilePrefix + '/artifact/ios/OctoFlutter.framework'
                   )
                 },
               }),
@@ -275,7 +275,7 @@ export function iosIntegration() {
                 }),
                 onTap: () => {
                   RouterPlugin.open(
-                    kGitHubUrl +
+                    kGitHubFilePrefix +
                       '/example/octoflutter-ios/octoflutter-ios/OctoLoad/OFOpenManager.m'
                   )
                 },
@@ -294,7 +294,7 @@ export function iosIntegration() {
                 }),
                 onTap: () => {
                   RouterPlugin.open(
-                    kGitHubUrl +
+                    kGitHubFilePrefix +
                       '/example/octoflutter-ios/octoflutter-ios/OctoLoad/OFOpenManager.m'
                   )
                 },
@@ -313,7 +313,7 @@ export function iosIntegration() {
                 }),
                 onTap: () => {
                   RouterPlugin.open(
-                    kGitHubUrl +
+                    kGitHubFilePrefix +
                       '/example/octoflutter-ios/octoflutter-ios/OctoLoad/OFAppViewController.m'
                   )
                 },
@@ -332,7 +332,7 @@ export function iosIntegration() {
                 }),
                 onTap: () => {
                   RouterPlugin.open(
-                    kGitHubUrl +
+                    kGitHubFilePrefix +
                       '/example/octoflutter-ios/octoflutter-ios/OctoLoad/OFAppContainerController.m'
                   )
                 },
@@ -351,7 +351,7 @@ export function iosIntegration() {
                 }),
                 onTap: () => {
                   RouterPlugin.open(
-                    kGitHubUrl +
+                    kGitHubFilePrefix +
                       '/example/octoflutter-ios/octoflutter-ios/OctoChannels/MethodChannel/OFMCHttp.m'
                   )
                 },
@@ -370,7 +370,7 @@ export function iosIntegration() {
                 }),
                 onTap: () => {
                   RouterPlugin.open(
-                    kGitHubUrl +
+                    kGitHubFilePrefix +
                       '/example/octoflutter-ios/octoflutter-ios/OctoChannels/AppBundleChannels/OFAppBundleMCVideo.m'
                   )
                 },

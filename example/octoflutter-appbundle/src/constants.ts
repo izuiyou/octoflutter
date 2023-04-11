@@ -20,61 +20,65 @@ export const kSubTitleColor = kIsWeb
 export const kApiItemColor = Color.fromARGB(255, 19, 137, 253)
 
 export const kGitHubUrl = 'https://github.com/izuiyou/octoflutter'
+export const kGitHubFilePrefix =
+  'https://github.com/izuiyou/octoflutter/blob/main'
 
 export const kCodeAnimation =
-  kGitHubUrl +
+  kGitHubFilePrefix +
   '/example/octoflutter-appbundle/src/animation/mobile_page_animation.ts'
 
 export const kCodeCustomPaint =
-  kGitHubUrl +
+  kGitHubFilePrefix +
   '/example/octoflutter-appbundle/src/custom_paint/mobile_page_custom_paint.ts'
 
 export const kCodeLottie =
-  kGitHubUrl + '/example/octoflutter-appbundle/src/lottie/mobile_page_lottie.ts'
+  kGitHubFilePrefix +
+  '/example/octoflutter-appbundle/src/lottie/mobile_page_lottie.ts'
 
 export const kCodePageView =
-  kGitHubUrl +
+  kGitHubFilePrefix +
   '/example/octoflutter-appbundle/src/pageview/mobile_page_pageview.ts'
 
 export const kCodeNestedRefresh =
-  kGitHubUrl +
+  kGitHubFilePrefix +
   '/example/octoflutter-appbundle/src/refresh/mobile_page_nested_refresh.ts'
 
 export const kCodeHttpPlugin1 =
-  kGitHubUrl + '/example/octoflutter-appbundle/src/plugins/http_plugin.ts'
+  kGitHubFilePrefix +
+  '/example/octoflutter-appbundle/src/plugins/http_plugin.ts'
 
 export const kCodeHttpPlugin2 =
-  kGitHubUrl +
+  kGitHubFilePrefix +
   '/example/octoflutter-android/app/src/main/java/example/octoflutter/plugins/HttpPlugin.kt'
 
 export const kCodeHttpPlugin3 =
-  kGitHubUrl +
+  kGitHubFilePrefix +
   '/example/octoflutter-android/app/src/main/java/example/octoflutter/plugins/PluginRegister.kt'
 
 export const kCodeVideo1 =
-  kGitHubUrl +
+  kGitHubFilePrefix +
   '/example/octoflutter-appbundle/src/plugins/video_appbundle_plugin.ts'
 
 export const kCodeVideo2 =
-  kGitHubUrl +
+  kGitHubFilePrefix +
   '/example/octoflutter-appbundle/src/plugins/video_appbundle_plugin.ts'
 
 export const kCodeVideo3 =
-  kGitHubUrl +
+  kGitHubFilePrefix +
   '/example/octoflutter-android/app/src/main/java/example/octoflutter/plugins/VideoAppBundlePlugin.kt'
 
 export const kCodeVideo4 =
-  kGitHubUrl +
+  kGitHubFilePrefix +
   '/example/octoflutter-android/app/src/main/java/example/octoflutter/plugins/PluginRegister.kt'
 
 export const kCodePlatformView1 =
-  kGitHubUrl +
+  kGitHubFilePrefix +
   '/example/octoflutter-appbundle/src/plugins/mobile_page_platform_view.ts'
 
 export const kCodePlatformView2 =
-  kGitHubUrl +
+  kGitHubFilePrefix +
   '/example/octoflutter-android/app/src/main/java/example/octoflutter/platformview/ExamplePlatformViewAppBundlePlugin.kt'
 
 export const kCodePlatformView3 =
-  kGitHubUrl +
+  kGitHubFilePrefix +
   '/example/octoflutter-android/app/src/main/java/example/octoflutter/plugins/PluginRegister.kt'
