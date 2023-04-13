@@ -1,4 +1,3 @@
-import {Color} from '@octoflutter/dartsdk'
 import {
   AppBar,
   BuildContext,
@@ -6,6 +5,10 @@ import {
   Colors,
   Column,
   CrossAxisAlignment,
+  FloatingActionButton,
+  Icon,
+  Icons,
+  Image,
   Key,
   MainAxisAlignment,
   MaterialApp,
@@ -14,15 +17,10 @@ import {
   State,
   StatefulWidget,
   StatelessWidget,
-  SystemUiOverlayStyle,
   Text,
+  TextStyle,
   ThemeData,
   Widget,
-  Image,
-  TextStyle,
-  FloatingActionButton,
-  Icon,
-  Icons,
 } from '@octoflutter/flutter'
 
 class _MyHomePageState extends State<MyHomePage> {
@@ -39,9 +37,6 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Colors.white,
       appBar: new AppBar({
         title: new Text(this.widget.title),
-        systemOverlayStyle: new SystemUiOverlayStyle({
-          statusBarColor: Color.fromARGB(255, 103, 78, 167),
-        }),
       }),
       body: new Center({
         child: new Column({

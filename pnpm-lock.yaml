@@ -91,7 +91,7 @@ importers:
     devDependencies:
       '@octoflutter/cli': link:../cli
 
-  example/octoflutter-appbundle:
+  example/demo-appbundle:
     specifiers:
       '@octoflutter/cli': workspace:../../bin/cli
       '@octoflutter/dartsdk': workspace:../../packages/dartsdk
@@ -214,6 +214,19 @@ importers:
       '@octoflutter/photo': link:../../octopack/photo
       '@octoflutter/picker': link:../../octopack/picker
       '@octoflutter/refresh': link:../../octopack/refresh
+    devDependencies:
+      '@octoflutter/cli': link:../../bin/cli
+
+  test/transparent-test:
+    specifiers:
+      '@octoflutter/cli': workspace:../../bin/cli
+      '@octoflutter/dartsdk': workspace:../../packages/dartsdk
+      '@octoflutter/flutter': workspace:../../packages/flutter
+      '@octoflutter/octo': workspace:../../packages/octo
+    dependencies:
+      '@octoflutter/dartsdk': link:../../packages/dartsdk
+      '@octoflutter/flutter': link:../../packages/flutter
+      '@octoflutter/octo': link:../../packages/octo
     devDependencies:
       '@octoflutter/cli': link:../../bin/cli
 

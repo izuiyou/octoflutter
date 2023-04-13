@@ -8,6 +8,7 @@
     "api": "node scripts/apidoc.js",
     "clean": "node scripts/clean.js",
     "updv": "node scripts/update_version.js",
+    "lint": "eslint --ignore-path .eslintignore --fix ./ --ext .ts",
     "doc": "node scripts/document.js"
   },
   "devDependencies": {

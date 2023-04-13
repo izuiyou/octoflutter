@@ -4,4 +4,4 @@ packages:
   - 'bin/*'
   - 'benchmark/*'
   - 'test/*'
-  - 'example/octoflutter-appbundle'
+  - 'example/demo-appbundle'

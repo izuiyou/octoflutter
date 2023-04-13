@@ -25,7 +25,6 @@ import {
   SingleChildScrollView,
   State,
   StatefulWidget,
-  StatelessWidget,
   Text,
   TextStyle,
   Widget,
@@ -76,6 +75,7 @@ class PageShaderMaskState extends State<StatefulWidget> {
                     style: new TextStyle({
                       fontSize: 50,
                       fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     }),
                   }),
                 }),
@@ -105,6 +105,7 @@ class PageShaderMaskState extends State<StatefulWidget> {
                     style: new TextStyle({
                       fontSize: 50,
                       fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     }),
                   }),
                 }),
@@ -131,6 +132,7 @@ class PageShaderMaskState extends State<StatefulWidget> {
                     style: new TextStyle({
                       fontSize: 50,
                       fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     }),
                   }),
                 }),
@@ -141,11 +143,12 @@ class PageShaderMaskState extends State<StatefulWidget> {
                 height: 400,
                 color: Colors.red,
                 child:
-                  isNullOrUndefined(this.image) || kIsWeb
+                  isNullOrUndefined(this.image) || kHtmlMode
                     ? new Text('123456789', {
                         style: new TextStyle({
                           fontSize: 50,
                           fontWeight: FontWeight.bold,
+                          color: Colors.white,
                         }),
                       })
                     : new ShaderMask({
@@ -165,6 +168,7 @@ class PageShaderMaskState extends State<StatefulWidget> {
                             style: new TextStyle({
                               fontSize: 50,
                               fontWeight: FontWeight.bold,
+                              color: Colors.white,
                             }),
                           }
                         ),

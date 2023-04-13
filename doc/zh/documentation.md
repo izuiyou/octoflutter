@@ -5,7 +5,7 @@
   ```shell
    git clone #本项目源码
    pnpm install
-   cd example/octoflutter-appbundle
+   cd example/demo-appbundle
    pnpm dw
    ```
 

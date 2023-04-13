@@ -1,34 +1,32 @@
-import {Color} from '@octoflutter/dartsdk'
 import {
+  Alignment,
   AppBar,
   BuildContext,
   Center,
   Colors,
   Column,
+  Container,
   CrossAxisAlignment,
+  EdgeInsets,
+  FloatingActionButton,
+  Icon,
+  Icons,
+  Image,
   Key,
   MainAxisAlignment,
   MaterialApp,
+  Navigator,
+  RawMaterialButton,
   runApp,
   Scaffold,
   State,
   StatefulWidget,
   StatelessWidget,
-  SystemUiOverlayStyle,
   Text,
+  TextStyle,
   ThemeData,
   Widget,
-  Image,
-  TextStyle,
-  FloatingActionButton,
-  Icon,
-  Icons,
   WidgetBuilder,
-  Alignment,
-  Container,
-  EdgeInsets,
-  RawMaterialButton,
-  Navigator,
 } from '@octoflutter/flutter'
 import {PageListView} from './page_list_view'
 import {PageOctoListView} from './page_octo_list'
@@ -47,9 +45,6 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Colors.white,
       appBar: new AppBar({
         title: new Text(this.widget.title),
-        systemOverlayStyle: new SystemUiOverlayStyle({
-          statusBarColor: Color.fromARGB(255, 103, 78, 167),
-        }),
       }),
       body: new Center({
         child: new Column({

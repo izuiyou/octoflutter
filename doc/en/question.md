@@ -25,5 +25,7 @@ OctoFlutter has dynamic capability, but it is not recommended to use it. If it n
 #### A2:Widget capability is not completely equivalent to Flutter
 At present, OctoFlutter is still in the stage of gradual improvement. It has covered most of the widgets of Flutter, but it is not completely equivalent to Flutter. Before use, weigh whether the existing widgets can meet your needs.
 
-#### A3:OctoRepaintBoundary
-OctoRepaintBoundary is a more radical optimization method than RepaintBoundary, but it will also lead to the growth of GPU memory, which needs to be used sparingly.
+#### A3:Ensure that the octoflutter series npm packages used are all the same version
+Please explicitly depend on a certain version of the octoflutter series npm package in your project, such as x.y.z, and do not use ~x.y.z or ^x.y.z.
+
+If your project depend on the x.y.z version of @octoflutter/flutter, then your @octoflutter/cli, @octoflutter/dartsdk, and all other packages of the octoflutter series should have a same version number x.y.z.

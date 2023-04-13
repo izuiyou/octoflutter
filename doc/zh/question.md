@@ -28,5 +28,6 @@ OctoFlutter具备动态化的能力，但不推荐使用，如需使用，开发
 #### A2:Widget能力不完全等价于Flutter
 目前OctoFlutter还处于逐渐完善的阶段，已经涵盖了Flutter绝大部分Widget，但并不是全面等价于Flutter，使用前权衡现有的Widget是否能满足你的需求。
 
-#### A3:OctoRepaintBoundary的使用
-OctoRepaintBoundary是比RepaintBoundary更加激进的优化手段，但同时也会带来GPU内存的增长，需要有节制的使用。
+#### A3:确保使用的octoflutter系列npm package都是同一版本
+在你的项目中请明确的依赖octoflutter系列npm package的某一个版本，例如：x.y.z，不要使用～x.y.z或^x.y.z 。
+如果你的项目依赖了@octoflutter/flutter的x.y.z版本，那么你的@octoflutter/cli、@octoflutter/dartsdk以及其它所有octoflutter系列的package，版本号都应该为x.y.z。

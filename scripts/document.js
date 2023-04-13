@@ -37,12 +37,12 @@ getDirFiles = (dir) => {
 
 const cpAppAsset = () => {
   getDirFiles(
-    path.resolve(__dirname, '../example/octoflutter-appbundle/assets')
+    path.resolve(__dirname, '../example/demo-appbundle/assets')
   ).forEach((v) => {
     fs.cp(
       v,
       v.replace(
-        path.resolve(__dirname, '../example/octoflutter-appbundle'),
+        path.resolve(__dirname, '../example/demo-appbundle'),
         path.resolve(__dirname, './doc')
       ),
       (err) => {
@@ -58,7 +58,7 @@ const cpAppJs = () => {
   const files = ['app.js', 'framework.js', 'index.html', 'libs.js']
   files.forEach((v) => {
     fs.cpSync(
-      path.resolve(__dirname, '../example/octoflutter-appbundle/build/' + v),
+      path.resolve(__dirname, '../example/demo-appbundle/build/' + v),
       path.resolve(__dirname, './doc/' + v)
     )
   })
@@ -67,7 +67,7 @@ const cpAppJs = () => {
 function checkFile() {
   if (
     fs.existsSync(
-      path.resolve(__dirname, '../example/octoflutter-appbundle/build/app.js')
+      path.resolve(__dirname, '../example/demo-appbundle/build/app.js')
     )
   ) {
     cpAppJs()
@@ -78,16 +78,16 @@ function checkFile() {
 const checkApp = () => {
   if (
     fs.existsSync(
-      path.resolve(__dirname, '../example/octoflutter-appbundle/build')
+      path.resolve(__dirname, '../example/demo-appbundle/build')
     )
   ) {
-    fs.rmSync(path.join(__dirname, '../example/octoflutter-appbundle/build'), {
+    fs.rmSync(path.join(__dirname, '../example/demo-appbundle/build'), {
       recursive: true,
       force: true,
     })
   }
   const result = spawn.spawn('pnpm', ['ddoc'], {
-    cwd: path.resolve(__dirname, '../example/octoflutter-appbundle'),
+    cwd: path.resolve(__dirname, '../example/demo-appbundle'),
   })
   result.stdout.on('data', (s) => {
     checkFile()

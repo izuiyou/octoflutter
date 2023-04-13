@@ -1,9 +1,12 @@
+import {Color, Radius} from '@octoflutter/dartsdk'
 import {
   Alignment,
   AppBar,
   Axis,
+  BorderRadius,
   BuildContext,
   Center,
+  ClipRRect,
   Colors,
   Column,
   Container,
@@ -24,7 +27,6 @@ import {
   State,
   StatefulWidget,
   StatelessWidget,
-  SystemUiOverlayStyle,
   TargetPlatform,
   Text,
   TextStyle,
@@ -97,9 +99,6 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Colors.white,
       appBar: new AppBar({
         title: new Text(this.widget.title),
-        systemOverlayStyle: new SystemUiOverlayStyle({
-          statusBarColor: Colors.transparent,
-        }),
       }),
       body: new Center({
         child: new SingleChildScrollView({
@@ -142,23 +141,26 @@ class _MyHomePageState extends State<MyHomePage> {
 
   btnGo = (name: string, page: string): Widget => {
     return new Container({
-      margin: EdgeInsets.only({top: 10, bottom: 10}),
-      child: new RawMaterialButton({
-        child: new Container({
-          alignment: Alignment.center,
-          child: new Text(name, {
-            style: new TextStyle({
-              fontSize: 14,
-              color: Colors.black,
+      margin: EdgeInsets.only({top: 10, bottom: 10, right: 50, left: 50}),
+      child: new ClipRRect({
+        child: new RawMaterialButton({
+          child: new Container({
+            alignment: Alignment.center,
+            child: new Text(name, {
+              style: new TextStyle({
+                fontSize: 14,
+                color: Colors.white,
+              }),
             }),
+            height: 50,
           }),
-          width: 150,
-          height: 50,
+          fillColor: Colors.blue,
+          splashColor: Color.fromARGB(255, 17, 80, 129),
+          onPressed: () => {
+            Navigator.of(this.context).pushNamed(page)
+          },
         }),
-        fillColor: Colors.yellow,
-        onPressed: () => {
-          Navigator.of(this.context).pushNamed(page)
-        },
+        borderRadius: BorderRadius.all(Radius.circular(8)),
       }),
     })
   }

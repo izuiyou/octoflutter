@@ -34,19 +34,20 @@ OctoFlutter是Flutter Web与Flutter Mobile的一种混合体，通过全新的�
 4.在移动设备上运行业务
   * 运行example目录下的octoflutter-android/octoflutter-ios工程
   * 安装app，运行，配置开发机的IP地址（用于请求第三步构建的业务产物）
-  * 点击按钮 "Launch Remote AppBundle"
+  * 打开app，点击按钮 "Launch Remote AppBundle"
 
 ### 文档
-* [进一步了解OctoFlutter](./octoflutter.md)
 * [OctoFlutter开发者文档](./documentation.md)
+* [进一步了解OctoFlutter](./octoflutter.md)
 * [常见问题及注意事项](./question.md)
+* [路线规划](./roadmap.md)
 
 ### 实践
 <img src="../example_1.jpg" width = 200 >  <img src="../example_2.jpg" width = 200>
 
 
 ### 开源范围
-目前OctoFlutter胶水层完全开源的状态，开发者可以使用OctoFlutter的完整能力。对于Engine层源码、dart2js修改、多AppBundle共享Engine设计、胶水层背后的处理、flutter_web_sdk修改、framework剥离等暂不开源。
+目前OctoFlutter胶水层完全开源的状态，开发者可以使用OctoFlutter的完整能力。
 
 ### 联系我们
 
