@@ -49,7 +49,7 @@ OctoFlutter is a hybrid of Flutter Web and Flutter Mobile, which use a new idea 
 
 ### Open Source
 
-Currently, The open source code mainly is Glue.
+Currently, The open source code mainly is Glue, which is the JS & TS part of OctoFlutter.
 
 ### Contact Us
 

@@ -47,7 +47,7 @@ OctoFlutter是Flutter Web与Flutter Mobile的一种混合体，通过全新的�
 
 
 ### 开源范围
-目前OctoFlutter胶水层完全开源的状态，开发者可以使用OctoFlutter的完整能力。
+目前开源的是OctoFlutter的胶水层，即JS和TS代码部分。开发者可以使用OctoFlutter的完整能力。
 
 ### 联系我们
 
