@@ -1,6 +1,6 @@
 {
   "name": "@octoflutter/custompaint-benchmark",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "custompaint-benchmark",
   "main": "index.ts",
   "sideEffects": false,

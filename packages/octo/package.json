@@ -1,6 +1,6 @@
 {
   "name": "@octoflutter/octo",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "octo is a series of useful widgets",
   "main": "index.ts",
   "sideEffects": false,

@@ -17,7 +17,7 @@ OctoFlutter是Flutter Web与Flutter Mobile的一种混合体，通过全新的�
 1.创建模版工程
    ```shell
    pnpm add -g @octoflutter/cli #pnpm 安装 https://pnpm.io/installation#using-npm
-   pnpm octoflutter create app
+   octoflutter create app
    cd app
    pnpm install
    ```

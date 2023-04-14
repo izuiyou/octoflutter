@@ -1,6 +1,6 @@
 {
   "name": "@octoflutter/flutter",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "this part provide flutter widget",
   "main": "index.ts",
   "sideEffects": false,

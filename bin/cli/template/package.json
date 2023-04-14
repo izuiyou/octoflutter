@@ -14,8 +14,8 @@
     "types.d.ts"
   ],
   "dependencies": {
-    "@octoflutter/dartsdk": "0.9.0",
-    "@octoflutter/flutter": "0.9.0"
+    "@octoflutter/dartsdk": "0.9.1",
+    "@octoflutter/flutter": "0.9.1"
   },
   "octo": {
     "assets": "./assets"

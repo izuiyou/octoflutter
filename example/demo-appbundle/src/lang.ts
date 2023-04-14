@@ -202,7 +202,7 @@ function generateZh() {
   res.quick_start_content_1 =
     'OctoFlutter是一个面向TypeScript的新型Flutter框架，所以天然融入前端生态，这里推荐使用Visual Studio Code进行开发。'
   res.quick_start_content_2 =
-    '1.安装 [pnpm add -g @octoflutter/cli]\n2.提供的常用命令\n[pnpm octoflutter -v]可查看当前@octoflutter/cli版本\n[pnpm octoflutter create app] 可以在当前目录下创建名为app的模板工程'
+    '1.安装 [pnpm add -g @octoflutter/cli]\n2.提供的常用命令\n[pnpm octoflutter -v]可查看当前@octoflutter/cli版本\n[octoflutter create app] 可以在当前目录下创建名为app的模板工程'
   res.quick_start_content_3 =
     '1:cd到app根目录，执行[pnpm install],安装依赖,开发者可按需修改package.json中@octoflutter/flutter,@octoflutter/dartsdk到某一个版本\n2:[pnpm dw] 在业务工程执行，可以通过http://localhost:54321 在浏览器中预览调试等\n3:[pnpm dm] 在业务工程执行，可以在build/output下生成适合mobile运行的zip文件'
   res.quick_start_content_4 = '参考本项目源码或test目录下测试工程'
@@ -429,7 +429,7 @@ function generateEn() {
   res.quick_start_content_1 =
     'OctoFlutter is a new type of Flutter framework for TypeScript, so it naturally integrates into the front-end ecosystem. It is recommended to use Visual Studio Code for development.'
   res.quick_start_content_2 =
-    '1.[pnpm add -g @octoflutter/cli]\n2.common commands provided\n[pnpm octoflutter -v] check the version of @octoflutter/cli\n[pnpm octoflutter create app] create a template project from cwd'
+    '1.[pnpm add -g @octoflutter/cli]\n2.common commands provided\n[pnpm octoflutter -v] check the version of @octoflutter/cli\n[octoflutter create app] create a template project from cwd'
   res.quick_start_content_3 =
     '1:cd to the app root directory, execute [pnpm install] to install dependencies. You can modify the version of @octoflutter/flutter、@octoflutter/dartsdk in package.json file.\n2:execute [pnpm dw] can preview and debug in the browser through http://localhost:54321\n3:execute [pnpm dm] can generate zip files suitable for mobile located in build/output.'
   res.quick_start_content_4 =

@@ -1,6 +1,6 @@
 {
   "name": "@octoflutter/flutter-test",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "octoflutter test in complex scenarios",
   "main": "index.ts",
   "sideEffects": false,

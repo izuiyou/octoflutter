@@ -1,6 +1,6 @@
 {
   "name": "@octoflutter/cli",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "cli",
   "main": "cli.js",
   "sideEffects": false,

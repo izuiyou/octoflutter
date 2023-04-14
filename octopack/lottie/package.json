@@ -1,6 +1,6 @@
 {
   "name": "@octoflutter/lottie",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "lottie",
   "main": "index.ts",
   "sideEffects": false,

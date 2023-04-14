@@ -18,7 +18,7 @@ OctoFlutter is a hybrid of Flutter Web and Flutter Mobile, which use a new idea 
 1.create template project
    ```shell
    pnpm add -g @octoflutter/cli #pnpm installation https://pnpm.io/installation#using-npm
-   pnpm octoflutter create app
+   octoflutter create app
    cd app
    pnpm install
    ```

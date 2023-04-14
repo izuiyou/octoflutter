@@ -1,6 +1,6 @@
-### octoflutter cli
+### @octoflutter/cli
 
-### Install
+### Installation
 
 ```bash
 $ pnpm add -g @octoflutter/cli
