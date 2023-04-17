@@ -30,7 +30,8 @@ dependencies {
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'com.liulishuo.okdownload:okhttp:1.0.3'
     implementation 'com.liulishuo.okdownload:okdownload:1.0.3'
-    api files('libs/octoflutter.jar')
+    api files('../../../artifact/android/octoflutter.jar')
+//    api 'io.github.izuiyou:octoflutter:0.0.1'
     implementation "com.facebook.fresco:fresco:2.5.0"
     implementation "com.facebook.fresco:animated-base:2.5.0"
     implementation "com.facebook.fresco:animated-gif:2.5.0"

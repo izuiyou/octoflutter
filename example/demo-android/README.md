@@ -7,16 +7,22 @@ This tutorial describes how to integrate `OctoFlutter` into your Android project
 1.Create an Android project<br>
 2.Local integration
    * Copy `octoflutter.jar` to your project's `libs` directory.<br>
-   !> you can find it [here](./support/libs/octoflutter.jar)
+   !> you can find it [here](../../artifact/android/octoflutter.jar)
    * Configure the build.gradle
    ```shell
    api files('libs/octoflutter.jar')
    ```
-3.Implement `ImageDataProvider` , you can refer to [FrescoImageProvider](./support/src/main/java/com/example/support/FrescoImageProvider.java) in this project.<br>
-4.Implement `Ambient` , you can refer to [LocalAndRemoteAmbientImpl](./support/src/main/java/com/example/support/local/LocalAndRemoteAmbientImpl.java) in this project.<br>
-4.Inherit `AbsBundleSupport` , you can refer to [AppBundleSupportImpl](./support/src/main/java/com/example/support/AppBundleSupportImpl.java) in this project.<br>
-5.Inherit `AbsOctoFlutterActivity`, you can refer to [AppBundleActivity](./app/src/main/java/example/octoflutter/AppBundleActivity.kt) in this project.<br>
-6.If you want to debug js on mobile, implement `DevEnvSupplier` & `DevEnvProvider` , you can refer to [AppBundleDevSupplier](./support/src/main/java/com/example/support/AppBundleDevSupplier.java) in this project.<br>
+3.Maven integration (optional)
+  * Check [Maven Centeral OctoFlutter version](https://central.sonatype.com/artifact/io.github.izuiyou/octoflutter)
+     * Configure the build.gradle
+     ```shell
+     api 'io.github.izuiyou:octoflutter:0.0.1'
+     ```
+4.Implement `ImageDataProvider` , you can refer to [FrescoImageProvider](./support/src/main/java/com/example/support/FrescoImageProvider.java) in this project.<br>
+5.Implement `Ambient` , you can refer to [LocalAndRemoteAmbientImpl](./support/src/main/java/com/example/support/local/LocalAndRemoteAmbientImpl.java) in this project.<br>
+6.Inherit `AbsBundleSupport` , you can refer to [AppBundleSupportImpl](./support/src/main/java/com/example/support/AppBundleSupportImpl.java) in this project.<br>
+7.Inherit `AbsOctoFlutterActivity`, you can refer to [AppBundleActivity](./app/src/main/java/example/octoflutter/AppBundleActivity.kt) in this project.<br>
+8.If you want to debug js on mobile, implement `DevEnvSupplier` & `DevEnvProvider` , you can refer to [AppBundleDevSupplier](./support/src/main/java/com/example/support/AppBundleDevSupplier.java) in this project.<br>
 
 #### Advanced Integration
 

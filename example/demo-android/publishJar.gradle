@@ -1,0 +1,79 @@
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newInputStream())
+
+task sourceJar(type: Jar) {
+    from("../../artifact/android/octoflutter-sources.jar")
+    classifier "sources"
+}
+
+task docJar(type: Jar) {
+    from("../../artifact/android/octoflutter-javadoc.jar")
+    classifier "javadoc"
+}
+
+publishing {
+    repositories {
+        maven {
+            url = properties.getProperty("maven.staging")
+
+            credentials {
+                username = properties.getProperty("maven.user")
+                password = properties.getProperty("maven.pwd")
+            }
+        }
+    }
+
+    publications {
+        octoflutter(MavenPublication) {
+            groupId = 'io.github.izuiyou'
+            artifactId = 'octoflutter'
+            version = '0.0.1'
+
+            artifact "../../artifact/android/octoflutter.jar"
+            artifact(sourceJar)
+            artifact(docJar)
+
+            pom {
+                packaging = 'jar'
+                name = 'octoflutter'
+                description = 'OctoFlutter Android jar'
+                url = 'https://github.com/izuiyou/octoflutter'
+
+                licenses {
+                    license {
+                        name = 'BSD'
+                        url = 'https://github.com/izuiyou/octoflutter/blob/main/LICENSE'
+                    }
+                }
+
+                scm {
+                    connection = 'scm:https://github.com/izuiyou/octoflutter.git'
+                    developerConnection = 'scm:https://github.com/izuiyou/octoflutter.git'
+                    url = 'https://github.com/izuiyou/octoflutter'
+                }
+
+                developers {
+                    developer {
+                        id = 'octoflutter'
+                        name = 'octoflutter'
+                        email = 'octoflutter@xiaochuankeji.cn'
+                    }
+                }
+            }
+        }
+    }
+}
+
+signing {
+    def keyId = properties.getProperty('signing.keyId')
+    def secretKey = file(properties.getProperty('signing.secretKeyRingFile')).text
+    def password = properties.getProperty('signing.password')
+    useInMemoryPgpKeys(keyId, secretKey, password)
+    sign publishing.publications.octoflutter
+}
+
+project.tasks.publish.doLast {
+    delete file("../../artifact/android/octoflutter.jar.asc")
+    delete file("../../artifact/android/octoflutter-sources.jar.asc")
+    delete file("../../artifact/android/octoflutter-javadoc.jar.asc")
+}

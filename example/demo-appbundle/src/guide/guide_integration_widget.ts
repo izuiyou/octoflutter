@@ -67,6 +67,27 @@ export function androidIntegration() {
             new WidgetSpan({
               child: new GestureDetector({
                 child: new Text(
+                  Lang.instance.res().android_integration_rich_13,
+                  {
+                    style: new TextStyle({
+                      fontSize: kSize14,
+                      color: kHoverTextColor,
+                    }),
+                  }
+                ),
+                onTap: () => {
+                  RouterPlugin.open(
+                    'https://central.sonatype.com/artifact/io.github.izuiyou/octoflutter'
+                  )
+                },
+              }),
+            }),
+            new TextSpan({
+              text: Lang.instance.res().android_integration_rich_14,
+            }),
+            new WidgetSpan({
+              child: new GestureDetector({
+                child: new Text(
                   Lang.instance.res().android_integration_rich_4,
                   {
                     style: new TextStyle({

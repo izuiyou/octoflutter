@@ -67,6 +67,8 @@ export class LangRes {
   android_integration_rich_10: string
   android_integration_rich_11: string
   android_integration_rich_12: string
+  android_integration_rich_13: string
+  android_integration_rich_14: string
 
   ios_integration_1: string
   ios_integration_2: string
@@ -234,19 +236,23 @@ function generateZh() {
   res.android_integration_rich_2 = '它'
   res.android_integration_rich_3 = `\n    配置 build.gradle
   api files('libs/octoflutter.jar')
-
-3.实现 ImageDataProvider , 你可以参考本工程的 `
+3.Maven 集成 (可选)
+    查询`
+  res.android_integration_rich_13 = 'Maven Centeral OctoFlutter 版本'
+  res.android_integration_rich_14 = `配置 build.gradle
+  api 'io.github.izuiyou:octoflutter:0.0.1'
+4.实现 ImageDataProvider , 你可以参考本工程的`
   res.android_integration_rich_4 = 'FrescoImageProvider'
-  res.android_integration_rich_5 = '\n4.实现 Ambient , 你可以参考本工程的 '
+  res.android_integration_rich_5 = '\n5.实现 Ambient , 你可以参考本工程的 '
   res.android_integration_rich_6 = 'LocalAndRemoteAmbientImpl'
   res.android_integration_rich_7 =
-    ' \n5.继承 AbsBundleSupport , 你可以参考本工程的'
+    ' \n6.继承 AbsBundleSupport , 你可以参考本工程的'
   res.android_integration_rich_8 = 'AppBundleSupportImpl'
   res.android_integration_rich_9 =
-    '\n6.继承 AbsOctoFlutterActivity, 你可以参考本工程的'
+    '\n7.继承 AbsOctoFlutterActivity, 你可以参考本工程的'
   res.android_integration_rich_10 = 'AppBundleActivity'
   res.android_integration_rich_11 =
-    '\n7.如果你想在手机上调试js需要额外实现 DevEnvSupplier 和 DevEnvProvider , 你可以参考本工程的'
+    '\n8.如果你想在手机上调试js需要额外实现 DevEnvSupplier 和 DevEnvProvider , 你可以参考本工程的'
   res.android_integration_rich_12 = 'AppBundleDevSupplier'
 
   res.ios_integration_1 = '简易集成'
@@ -465,19 +471,23 @@ function generateEn() {
   res.android_integration_rich_2 = 'here'
   res.android_integration_rich_3 = `\n       Configure the build.gradle
   api files('libs/octoflutter.jar')
-
-3.Implement ImageDataProvider , you can refer to `
+3.Maven integration (optional)
+      Check `
+  res.android_integration_rich_13 = 'Maven Centeral OctoFlutter version'
+  res.android_integration_rich_14 = `\n      Configure the build.gradle
+  api 'io.github.izuiyou:octoflutter:0.0.1'
+4.Implement ImageDataProvider , you can refer to`
   res.android_integration_rich_4 = 'FrescoImageProvider'
-  res.android_integration_rich_5 = '\n4.Implement Ambient , you can refer to '
+  res.android_integration_rich_5 = '\n5.Implement Ambient , you can refer to '
   res.android_integration_rich_6 = 'LocalAndRemoteAmbientImpl'
   res.android_integration_rich_7 =
-    '\n5.Inherit AbsBundleSupport , you can refer to '
+    '\n6.Inherit AbsBundleSupport , you can refer to '
   res.android_integration_rich_8 = 'AppBundleSupportImpl'
   res.android_integration_rich_9 =
-    '\n6.Inherit AbsOctoFlutterActivity, you can refer to '
+    '\n7.Inherit AbsOctoFlutterActivity, you can refer to '
   res.android_integration_rich_10 = 'AppBundleActivity'
   res.android_integration_rich_11 =
-    '\n7.If you want to debug js on mobile, implement DevEnvSupplier & DevEnvProvider , you can refer to '
+    '\n8.If you want to debug js on mobile, implement DevEnvSupplier & DevEnvProvider , you can refer to '
   res.android_integration_rich_12 = 'AppBundleDevSupplier'
 
   res.ios_integration_1 = 'Simple Integration'
