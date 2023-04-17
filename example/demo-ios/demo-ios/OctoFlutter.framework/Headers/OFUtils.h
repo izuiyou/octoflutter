@@ -25,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSData*)arrayToData:(NSArray*)array;
 
 + (void)logTime:(NSString*)text;
+
 @end
 
 NS_ASSUME_NONNULL_END

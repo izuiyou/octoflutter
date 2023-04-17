@@ -51,7 +51,7 @@
     // 注册channel
     config.engineMCClassNames = @[
         @"OFMCHttp",
-        @"OFRouter",
+        @"OFMCRouter",
     ];
     return config;
 }

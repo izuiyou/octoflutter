@@ -358,7 +358,7 @@
     return self.player.rate!=0 && self.player.error==nil;
 }
 
-#pragma mark - OFTextureProtocol
+#pragma mark - FlutterTexture Protocol
 
 - (CVPixelBufferRef)copyPixelBuffer {
     CMTime outputItemTime = [_videoOutput itemTimeForHostTime:CACurrentMediaTime()];
@@ -369,7 +369,7 @@
     }
 }
 
-- (void)onTextureUnregistered:(NSObject<OFTextureProtocol>*)texture {
+- (void)onTextureUnregistered:(NSObject<FlutterTexture>*)texture {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self dispose];
     });

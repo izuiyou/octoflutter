@@ -45,10 +45,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) BOOL canSwipeBack;
 
-// 控制内部代码实现
-@property (nonatomic, assign) BOOL useIOManager;
-@property (nonatomic, assign) BOOL useRasterCache;
-
 // 记录app.js被更新的次数，debug时使用，默认为0
 @property (nonatomic, assign) int updateCount;
 

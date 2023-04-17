@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA0AFA3E29DECA3800CBF1E5 /* OFRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0AFA3D29DECA3800CBF1E5 /* OFRouter.m */; };
+		AA0AFA3E29DECA3800CBF1E5 /* OFMCRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0AFA3D29DECA3800CBF1E5 /* OFMCRouter.m */; };
 		AA46330929C1C5EE00F005D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA46330829C1C5EE00F005D1 /* AppDelegate.m */; };
 		AA46330F29C1C5EE00F005D1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA46330E29C1C5EE00F005D1 /* ViewController.m */; };
 		AA46331229C1C5EE00F005D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA46331029C1C5EE00F005D1 /* Main.storyboard */; };
@@ -52,8 +52,8 @@
 /* Begin PBXFileReference section */
 		19B65D85BDDF7C7E80EAFA33 /* Pods-demo-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo-ios.release.xcconfig"; path = "Target Support Files/Pods-demo-ios/Pods-demo-ios.release.xcconfig"; sourceTree = "<group>"; };
 		452960E4AD491349B6F6FFBF /* Pods-demo-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo-ios.debug.xcconfig"; path = "Target Support Files/Pods-demo-ios/Pods-demo-ios.debug.xcconfig"; sourceTree = "<group>"; };
-		AA0AFA3C29DECA3800CBF1E5 /* OFRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OFRouter.h; sourceTree = "<group>"; };
-		AA0AFA3D29DECA3800CBF1E5 /* OFRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OFRouter.m; sourceTree = "<group>"; };
+		AA0AFA3C29DECA3800CBF1E5 /* OFMCRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OFMCRouter.h; sourceTree = "<group>"; };
+		AA0AFA3D29DECA3800CBF1E5 /* OFMCRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OFMCRouter.m; sourceTree = "<group>"; };
 		AA46330429C1C5EE00F005D1 /* demo-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "demo-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA46330729C1C5EE00F005D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AA46330829C1C5EE00F005D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -215,8 +215,8 @@
 				AA46334829C2B29800F005D1 /* OFMCBase.m */,
 				AA46334529C2B21900F005D1 /* OFMCHttp.h */,
 				AA46334429C2B21900F005D1 /* OFMCHttp.m */,
-				AA0AFA3C29DECA3800CBF1E5 /* OFRouter.h */,
-				AA0AFA3D29DECA3800CBF1E5 /* OFRouter.m */,
+				AA0AFA3C29DECA3800CBF1E5 /* OFMCRouter.h */,
+				AA0AFA3D29DECA3800CBF1E5 /* OFMCRouter.m */,
 			);
 			path = MethodChannel;
 			sourceTree = "<group>";
@@ -373,7 +373,7 @@
 				AA46331A29C1C5EF00F005D1 /* main.m in Sources */,
 				AA46333829C1CB1400F005D1 /* OFAppViewController.m in Sources */,
 				AA9ADEA329C860C70080CE89 /* VideoMessages.m in Sources */,
-				AA0AFA3E29DECA3800CBF1E5 /* OFRouter.m in Sources */,
+				AA0AFA3E29DECA3800CBF1E5 /* OFMCRouter.m in Sources */,
 				AA46333929C1CB1400F005D1 /* OFAppContainerController.m in Sources */,
 				AA46333729C1CB1400F005D1 /* OFFrameworkInfo.m in Sources */,
 				AA46333D29C1D01E00F005D1 /* OFRemoteLoadViewController.m in Sources */,

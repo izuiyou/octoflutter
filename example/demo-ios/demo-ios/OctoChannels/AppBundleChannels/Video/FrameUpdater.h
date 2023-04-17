@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
 
-@protocol OFTextureRegistryProtocol;
+@protocol FlutterTextureRegistry;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,9 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic) int64_t textureId;
 
-@property(nonatomic, weak, readonly) NSObject<OFTextureRegistryProtocol>* registry;
+@property(nonatomic, weak, readonly) NSObject<FlutterTextureRegistry>* registry;
 
-- (instancetype)initWithRegistry:(NSObject<OFTextureRegistryProtocol>*)registry;
+- (instancetype)initWithRegistry:(NSObject<FlutterTextureRegistry>*)registry;
 
 - (void)onDisplayLink:(CADisplayLink*)link;
 

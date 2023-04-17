@@ -10,7 +10,7 @@
 
 @implementation FrameUpdater
 
-- (instancetype)initWithRegistry:(NSObject<OFTextureRegistryProtocol>*)registry
+- (instancetype)initWithRegistry:(NSObject<FlutterTextureRegistry>*)registry
 {
     self = [super init];
     if (self) {

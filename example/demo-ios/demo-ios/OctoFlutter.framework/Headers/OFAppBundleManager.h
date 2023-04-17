@@ -8,6 +8,9 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
+extern NSNotificationName const kOFAppBundleRestarting;
+
 @class OFAppEngine;
 @class OFOpenConfig;
 @class OFAppBundle;
@@ -27,6 +30,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)shutApp:(int)bid;
 
 - (void)launchApp:(int)bid;
+
+- (void)recordImageKey:(NSString*)key isLocal:(BOOL)isLocal bid:(int)bid;
 
 - (NSString *)lookupAppAsset:(NSString*)url;
 

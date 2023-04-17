@@ -10,8 +10,6 @@
 
 #define kShowJSLog 1
 
-#define kUseVsync 1
-
 //#define kShowBridgeTimeLog 1
 //#define kShowCostTimeLog 1
 

@@ -11,9 +11,8 @@
 #import "OFBindingWindowSupport.h"
 #import "OFBindingTouchInput.h"
 #import "OFBindingWindowEvents.h"
-#import "OFTimerManager.h"
 #import "OFAppBundleManager.h"
-#import "OFTexture.h"
+#import "FlutterTexture.h"
 #import "OFPlatformViewInterface.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -23,7 +22,10 @@ typedef NS_ENUM(NSUInteger, OFAppEngineMode) {
     OFAppEngineMode_Shared
 };
 
-@interface OFAppEngine : NSObject<OFTextureRegistryProtocol>
+@class FlutterEngine;
+@interface OFAppEngine : NSObject<FlutterTextureRegistry>
+
+@property (nonatomic, strong, readonly) FlutterEngine       *flutterEngine;
 
 @property (nonatomic, assign, readonly) OFAppEngineMode     mode;
 
@@ -33,11 +35,8 @@ typedef NS_ENUM(NSUInteger, OFAppEngineMode) {
 
 @property (nonatomic, strong, readonly) OFChannelEngine     *channelEngine;
 
-// 渲染画面尺寸，默认取全屏
+// 渲染画面尺寸，默认取全屏，！！！注意：是UIView的size，不乘以scale！！！
 @property (nonatomic, assign, readonly) CGSize              currentViewSize;
-
-// timer
-@property (nonatomic, strong, readonly) OFTimerManager      *timerManager;
 
 // app bundles manager
 @property (nonatomic, strong, readonly) OFAppBundleManager  *appBundleManager;
@@ -59,16 +58,56 @@ typedef NS_ENUM(NSUInteger, OFAppEngineMode) {
 // top vc
 @property (nonatomic, weak, readonly) id      topVC;
 
+// device_pixel_ratio
+@property (nonatomic, assign, readonly) float     devicePixelRatio;
+
 // 是否将app脚本保存至文件，默认为否
 @property (nonatomic, assign) BOOL saveAppJS;
 
-- (instancetype)initWithMode:(OFAppEngineMode)mode engineKey:(NSString*)engineKey;
+#pragma mark - init
 
-- (void)setupFramework:(NSString*)folder fileName:(NSString*)fileName version:(int)version;
+- (instancetype)initWithMode:(OFAppEngineMode)mode engineKey:(NSString*)engineKey;
 
 - (void)setupWithConfig:(OFOpenConfig*)config;
 
-#pragma mark - shell
+#pragma mark - work for FlutterViewController
+
+- (OFAppBundleIsolate*)launchWithConfig:(OFOpenConfig*)config andVC:(UIViewController*)vc;
+
+- (void)updateViewportMetrics:(OFViewportMetrics*)viewportMetrics;
+
+- (void)doDispatchPacketBytes:(const unsigned char *)bytes length:(int)length;
+
+- (void)sendLifecycleState:(OFLifecycleState)state;
+
+- (void)activeAnimationFrame;
+
+- (void)popIsolateApp:(OFAppBundleIsolate*)isolateApp;
+
+- (void)viewResized:(CGSize)size;
+
+- (void)updateTopVC:(id)topVC;
+
+#pragma mark - manage FlutterEngine
+
+- (FlutterEngine*)setupFlutterEngine;
+
+- (void)maybeRemoveLastFlutterEngine;
+
+#pragma mark - destroy
+
+- (void)destroy;
+
+#pragma mark - touch
+
+- (void)setFastTouchEvent:(JSValue*)callback;
+
+#pragma mark - platform view
+
+- (void)onPlatformViewsMethodCall:(OFMethodCall*)call result:(OFResult)result;
+
+#pragma mark - task runner
+
 - (void)runPlatformTask:(void (^)(void))block;
 - (void)runLatchPlatformTask:(void (^)(void))block;
 - (void)runUITask:(void (^)(void))block;
@@ -77,28 +116,18 @@ typedef NS_ENUM(NSUInteger, OFAppEngineMode) {
 - (void)runLatchRasterTask:(void (^)(void))block;
 - (void)runIOTask:(void (^)(void))block;
 
-#pragma mark - surface
-- (void)bindSurface:(CAEAGLLayer*)layer width:(int)width height:(int)height;
+#pragma mark - timer
 
-- (void)unbindSurface;
+- (int)scheduleTimer:(JSValue*)callback interval:(NSTimeInterval)interval repeat:(BOOL)repeat;
 
-- (void)rebindSurface:(CAEAGLLayer*)layer width:(int)width height:(int)height;
+- (int)cancelTimerWithId:(int)tid;
 
-- (void)refreshCurrentIsolate;
+- (int)scheduleAnimationFrame:(JSValue*)callback;
 
-#pragma mark - shell
-- (void)cleanUp;
-
-- (void)destroy;
-
-- (uintptr_t)getShellPtr;
-
-#pragma mark - channels
-- (void)registerMethodChannels:(NSArray*)channels;
-
-- (void)registerEventChannels:(NSArray*)channels;
+- (int)cancelAnimationFrameWithId:(int)fid;
 
 #pragma mark - path tool
+
 - (NSString *)pathForAppFolder;
 
 - (NSString *)pathForAppResource:(NSString *)path;
@@ -113,48 +142,6 @@ typedef NS_ENUM(NSUInteger, OFAppEngineMode) {
 
 - (NSString *)pathForLibResource:(NSString *)name;
 
-#pragma mark - image cache
-
-- (void)recordImageKey:(NSString*)key isLocal:(BOOL)isLocal;
-
-#pragma mark - topVC
-
-- (void)updateTopVC:(id)topVC;
-
-#pragma mark - timer
-
-- (int)scheduleTimer:(JSValue*)callback interval:(NSTimeInterval)interval repeat:(BOOL)repeat;
-
-- (int)cancelTimerWithId:(int)tid;
-
-- (int)scheduleAnimationFrame:(JSValue*)callback;
-
-- (int)cancelAnimationFrameWithId:(int)fid;
-
-#pragma mark - touch
-
-- (void)setFastTouchEvent:(JSValue*)callback;
-
-- (void)dispatchTouches:(NSSet*)touches event:(UIEvent*)event;
-
-- (void)forceTouchesCancelled:(NSSet*)touches;
-
-#pragma mark - platform view
-
-- (void)setPlatformView:(UIView* _Nullable)view vc:(UIViewController* _Nullable)vc;
-
-- (void)onPlatformViewsMethodCall:(OFMethodCall*)call result:(OFResult)result;
-
-- (void)registerViewFactory:(NSObject<OFPlatformViewFactory>*)factory
-                     withId:(NSString*)factoryId;
-
-- (void)registerViewFactory:(NSObject<OFPlatformViewFactory>*)factory
-                     withId:(NSString*)factoryId
-                     policy:(OFPlatformViewGestureRecognizersBlockingPolicy)gestureRecognizersBlockingPolicy;
-
-#pragma mark - test
-
-- (void)test;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -15,6 +15,7 @@
 {
     UIActivityIndicatorView *testActivityIndicator;
     UIStatusBarStyle _statusBarStyle;
+    BOOL _statusBarHidden;
 }
 @property (nonatomic, strong) OFAppViewController *currentVC;
 @property (nonatomic, strong) OFAppInfo *appInfo;
@@ -187,13 +188,11 @@
     }];
 }
 
-#pragma mark -
+#pragma mark - status bar
+
 - (BOOL)prefersStatusBarHidden
 {
-    if (_appInfo) {
-        return [self.appInfo getFullScreen];
-    }
-    return NO;
+    return _statusBarHidden;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
@@ -206,6 +205,7 @@
 // 本地获取
 - (void)_onLocalAppInfo:(OFAppInfo*)ai
 {
+    _statusBarHidden = [ai getFullScreen];
     self.appInfo = ai;
     [self doInMain:^{
         [self setNeedsStatusBarAppearanceUpdate];
@@ -241,6 +241,7 @@
 // 在线获取
 - (void)_onAppInfo:(OFAppInfo*)ai
 {
+    _statusBarHidden = [ai getFullScreen];
     self.appInfo = ai;
     [self doInMain:^{
         [self setNeedsStatusBarAppearanceUpdate];
@@ -384,7 +385,7 @@
             config.args = self.args;
         }
         
-        OFAppViewController *vc = [[OFAppViewController alloc] initWithEngine:engine openConfg:config];
+        OFAppViewController *vc = [[OFAppViewController alloc] initWithAppEngine:engine openConfg:config];
         self.currentVC = vc;
         
         __weak typeof(self) weakSelf = self;
@@ -405,19 +406,30 @@
                 }];
             }
         };
-        [vc prepare];
+        vc.onStatusBarHidden = ^(BOOL hidden) {
+            __strong typeof(weakSelf)strongSelf = weakSelf;
+            if (strongSelf) {
+                [strongSelf doInMain:^{
+                    strongSelf->_statusBarHidden = hidden;
+                    [strongSelf setNeedsStatusBarAppearanceUpdate];
+                }];
+            }
+        };
+        
+        self.currentVC.view.frame = self.view.bounds;
+        self.currentVC.view.alpha = 0;
+        if ([self isAlphaColor:_bgColor]) {
+            [self.currentVC setBgColor:[UIColor clearColor]];
+        }
+
+        [self.view addSubview:self.currentVC.view];
+        [self addChildViewController:self.currentVC];
     }];
 }
 
 - (void)didRunApp
 {
     [testActivityIndicator stopAnimating];
-    
-    self.currentVC.view.frame = self.view.bounds;
-    self.currentVC.view.alpha = 0;
-    [self.currentVC setBgColor:[UIColor clearColor]];
-    [self.view addSubview:self.currentVC.view];
-    [self addChildViewController:self.currentVC];
     
     [UIView animateWithDuration:0.5 animations:^{
         self.currentVC.view.alpha = 1;
@@ -439,5 +451,15 @@
 
 - (void)setInterfaceOrientation:(UIInterfaceOrientation)orientation {
     [self.currentVC performOrientationUpdate:(1 << orientation)];
+}
+
+- (BOOL)isAlphaColor:(UIColor*)color
+{
+    CGColorRef colorRef = color.CGColor;
+    NSInteger numberOfComponents = CGColorGetNumberOfComponents(colorRef);
+    const CGFloat *components = CGColorGetComponents(colorRef);
+    CGFloat alpha = components[numberOfComponents-1];
+    
+    return alpha < 1;
 }
 @end

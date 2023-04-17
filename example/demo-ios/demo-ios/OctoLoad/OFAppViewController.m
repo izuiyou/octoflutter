@@ -22,6 +22,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
         
+    // 注册一个appbundle platform view
+    [self registerAppBundleViewFactory:[OFPlatformViewTestFactory new] withId:@"my_platform_view"];
+    
+    [self _buildDebugUI];
+}
+
+- (void)_buildDebugUI {
     CGFloat w = 30;
     UIButton *btnBack = [UIButton buttonWithType:(UIButtonTypeCustom)];
     btnBack.frame = CGRectMake(self.view.bounds.size.width-20-w, 90, w, w);
@@ -45,15 +52,6 @@
     btn.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin;
     [self.view addSubview:btn];
     [btn addTarget:self action:@selector(btnClick:) forControlEvents:(UIControlEventTouchUpInside)];
-}
-
-// 重载prepare方法
-- (void)prepare
-{
-    [super prepare];
-    
-    // 注册一个appbundle platform view
-    [self registerAppBundleViewFactory:[OFPlatformViewTestFactory new] withId:@"my_platform_view"];
 }
 
 #pragma mark - buttons

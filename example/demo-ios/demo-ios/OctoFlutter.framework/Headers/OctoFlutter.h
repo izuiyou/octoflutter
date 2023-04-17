@@ -26,10 +26,10 @@ FOUNDATION_EXPORT const unsigned char OctoFlutterVersionString[];
 #import <OctoFlutter/OFBindingObject.h>
 #import <OctoFlutter/OFFontParser.h>
 #import <OctoFlutter/OFJSContext.h>
-#import <OctoFlutter/OFSkiaView.h>
 #import <OctoFlutter/OFUtils.h>
 #import <OctoFlutter/OFViewportMetrics.h>
 #import <OctoFlutter/OFDataCacheManager.h>
+#import <OctoFlutter/OFDataDownloader.h>
 #import <OctoFlutter/OFPlatformViewInterface.h>
 
 #import <OctoFlutter/OFBasicMessageChannel.h>
@@ -44,9 +44,11 @@ FOUNDATION_EXPORT const unsigned char OctoFlutterVersionString[];
 #import <OctoFlutter/OFAppEnginePluginBase.h>
 #import <OctoFlutter/OFAppBundlePluginBase.h>
 #import <OctoFlutter/OFAppBundleVideoChannel.h>
-#import <OctoFlutter/OFTexture.h>
 
 #import <OctoFlutter/OFCodec.h>
 #import <OctoFlutter/OFBinaryCodec.h>
 #import <OctoFlutter/OFJSONMessageCodec.h>
 #import <OctoFlutter/OFStandardMessageCodec.h>
+
+#import <OctoFlutter/FlutterViewController.h>
+#import <OctoFlutter/FlutterTexture.h>
