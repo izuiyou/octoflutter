@@ -1,6 +1,0 @@
-framework module OctoFlutter {
-  umbrella header "OctoFlutter.h"
-
-  export *
-  module * { export * }
-}
