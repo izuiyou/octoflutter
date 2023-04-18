@@ -1,9 +1,27 @@
-### OctoFlutter iOS Integration Document
+# OctoFlutter iOS Integration Document
 
 This document is intended to help iOS application developers quickly integrate' OctoFlutter 'in their programs. Please follow the instructions below<br>
  !> Note: This document assumes that you have some iOS development experience.
 
-#### Manual deployment
+## Automatic Integration
+OctoFlutter is published through CocoaPods and can be automatically deployed after configuration. This method is recommended.<br>
+!> Note: This document assumes that you have experience using CocoaPods.
+1. Add a line of statements in Podfile:
+```ruby
+pod 'OctoFlutter'
+
+# OR specify a version
+pod 'OctoFlutter', '~> 0.0.1'
+```
+2. Run this command in the terminal to install：
+```shell
+pod install
+
+# OR install with CocoaPods index updated
+pod install --repo-update
+```
+
+## Manual Integration
 
 1. Open an iOS project. If you don't already have one, please create a new project<br>
 2. Add 'OctoFlutter.framework' to your project by "Add Files to"<br>
@@ -14,7 +32,7 @@ This document is intended to help iOS application developers quickly integrate' 
    * "Build Settings" - "Enable Bitcode" set to "NO"
    * "Build Settings" - "Validate Workspace" set to "YES"
 
-4. Code<br>
+## Code
    * Build *OFOpenConfig*, refer to the code of *OFOpenManager* in this project
 ```objc
 OFOpenConfig *config = [[OFOpenConfig alloc] init];
@@ -55,6 +73,6 @@ config.appMCClassNames = @[
 ```
 
 
-####Precautions
+## Precautions
    * The minimum system version supported by OctoFlutter is iOS 10.0
    * OctoFlutter does not support iOS Simulators, please use real machine debugging

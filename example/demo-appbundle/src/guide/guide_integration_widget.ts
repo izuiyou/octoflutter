@@ -246,7 +246,32 @@ export function androidIntegration() {
 
 export function iosIntegration() {
   return [
-    // 一级标题：简易集成
+    // 一级标题：自动集成
+    new Container({
+      child: new Text(Lang.instance.res().ios_integration_0, {
+        style: new TextStyle({
+          fontSize: kSize16,
+          fontWeight: FontWeight.bold,
+          color: kSubTitleColor,
+        }),
+      }),
+      margin: EdgeInsets.only({top: 10, bottom: 10, left: 20, right: 20}),
+    }),
+    // 具体内容：自动集成步骤
+    new Container({
+      child: new RichText({
+        softWrap: true,
+        text: new TextSpan({
+          text: Lang.instance.res().ios_integration_content_1,
+          style: new TextStyle({
+            fontSize: kSize14,
+            color: Colors.black54,
+          }),
+        }),
+      }),
+      margin: EdgeInsets.only({top: 0, bottom: 10, left: 20, right: 20}),
+    }),
+    // 一级标题：手动集成
     new Container({
       child: new Text(Lang.instance.res().ios_integration_1, {
         style: new TextStyle({
@@ -257,7 +282,7 @@ export function iosIntegration() {
       }),
       margin: EdgeInsets.only({top: 10, bottom: 10, left: 20, right: 20}),
     }),
-    // 具体内容：集成步骤
+    // 具体内容：手动集成步骤
     new Container({
       child: new RichText({
         softWrap: true,
@@ -277,15 +302,40 @@ export function iosIntegration() {
                   }),
                 }),
                 onTap: () => {
-                  RouterPlugin.open(
-                    kGitHubFilePrefix + '/artifact/ios/OctoFlutter.framework'
-                  )
+                  RouterPlugin.open(kGitHubFilePrefix + '/artifact/ios/')
                 },
               }),
             }),
             new TextSpan({
               text: Lang.instance.res().ios_integration_rich_3,
             }),
+          ],
+        }),
+      }),
+      margin: EdgeInsets.only({top: 0, bottom: 10, left: 20, right: 20}),
+    }),
+    // 一级标题：接入代码
+    new Container({
+      child: new Text(Lang.instance.res().ios_integration_2, {
+        style: new TextStyle({
+          fontSize: kSize16,
+          fontWeight: FontWeight.bold,
+          color: kSubTitleColor,
+        }),
+      }),
+      margin: EdgeInsets.only({top: 10, bottom: 10, left: 20, right: 20}),
+    }),
+    // 具体内容：接入代码
+    new Container({
+      child: new RichText({
+        softWrap: true,
+        text: new TextSpan({
+          text: Lang.instance.res().ios_integration_rich_4_,
+          style: new TextStyle({
+            fontSize: kSize14,
+            color: Colors.black54,
+          }),
+          children: [
             new WidgetSpan({
               child: new GestureDetector({
                 child: new Text(Lang.instance.res().ios_integration_rich_4, {
@@ -402,10 +452,9 @@ export function iosIntegration() {
       }),
       margin: EdgeInsets.only({top: 0, bottom: 10, left: 20, right: 20}),
     }),
-
     // 一级标题：注意事项
     new Container({
-      child: new Text(Lang.instance.res().ios_integration_2, {
+      child: new Text(Lang.instance.res().ios_integration_3, {
         style: new TextStyle({
           fontSize: kSize16,
           fontWeight: FontWeight.bold,

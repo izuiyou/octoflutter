@@ -1,9 +1,27 @@
-### OctoFlutter iOS 接入文档
+# OctoFlutter iOS 接入文档
 
 本文档旨在帮助iOS应用开发者在程序中快速接入`OctoFlutter`，请按照下述指南进行操作。<br>
-!> 注意: 以下文档假设您已经具备一定的iOS开发经验。
+!> 注意: 本文档假设您已经具备一定的iOS开发经验。
 
-#### 手动部署
+## 自动集成
+OctoFlutter通过CocoaPods发布，经过配置后可以自动部署，推荐使用这种方式。<br>
+!> 注意: 本文档假设您已经具备CocoaPods的使用经验。<br>
+1、在Podfile中添加一行语句：
+```ruby
+pod 'OctoFlutter'
+
+# 或指定版本号
+pod 'OctoFlutter', '~> 0.0.1'
+```
+2、在终端中运行命令进行安装：
+```shell
+pod install
+
+# 或确保CocoaPods索引更新的情况下安装
+pod install --repo-update
+```
+
+## 手动集成
 
 1、打开iOS项目，如果还没有，请创建一个新的项目<br>
 2、通过“添加文件”的方式添加 `OctoFlutter.framework` 到您的项目中<br>
@@ -14,7 +32,7 @@
    * "Build Settings" - "Enable Bitcode"设为"NO"
    * "Build Settings" - "Validate Workspace"设为"YES"
 
-4、接入代码<br>
+## 接入代码
    * 构建*OFOpenConfig*，参考本工程的*OFOpenManager*
 ```objc
 OFOpenConfig *config = [[OFOpenConfig alloc] init];
@@ -55,6 +73,6 @@ config.appMCClassNames = @[
 ```
 
 
-#### 注意事项
+## 注意事项
  * OctoFlutter支持的最小系统版本为iOS 10.0
  * OctoFlutter不支持iOS模拟器，请使用真机调试

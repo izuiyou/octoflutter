@@ -70,8 +70,10 @@ export class LangRes {
   android_integration_rich_13: string
   android_integration_rich_14: string
 
+  ios_integration_0: string
   ios_integration_1: string
   ios_integration_2: string
+  ios_integration_3: string
 
   ios_integration_content_1: string
   ios_integration_content_2: string
@@ -79,6 +81,7 @@ export class LangRes {
   ios_integration_rich_1: string
   ios_integration_rich_2: string
   ios_integration_rich_3: string
+  ios_integration_rich_4_: string
   ios_integration_rich_4: string
   ios_integration_rich_5: string
   ios_integration_rich_6: string
@@ -255,21 +258,16 @@ function generateZh() {
     '\n8.如果你想在手机上调试js需要额外实现 DevEnvSupplier 和 DevEnvProvider , 你可以参考本工程的'
   res.android_integration_rich_12 = 'AppBundleDevSupplier'
 
-  res.ios_integration_1 = '简易集成'
-  res.ios_integration_2 = '注意事项'
+  res.ios_integration_0 = '自动集成'
+  res.ios_integration_1 = '手动集成'
+  res.ios_integration_2 = '接入代码'
+  res.ios_integration_3 = '注意事项'
 
-  res.ios_integration_content_1 = `  1、打开iOS项目，如果还没有，请创建一个新的项目
-  2、通过“添加文件”的方式添加 OctoFlutter.framework 到您的项目中, 你可以在artifact目录下找到它
-  3、XCode项目设置
-    • "General" - "Frameworks,Libraries,and Embedded Content" - "OctoFlutter.framework"设为"Embed & Sign"
-    • "Build Settings" - "Enable Bitcode"设为"NO"
-    • "Build Settings" - "Validate Workspace"设为"YES"
-  4、接入代码
-    • 构建OFOpenConfig，参考本工程的OFOpenManager
-    • 创建OFAppEngine，参考本工程的OFOpenManager
-    • 使用OFBaseViewController或继承自它的类，参考本工程的OFAppViewController和OFAppContainerController
-    • 注册channel（类似Flutter的插件），参考本工程的OFMCHttp和OFAppBundleMCVideo
-  `
+  res.ios_integration_content_1 = `OctoFlutter通过CocoaPods发布，经过配置后可以自动部署，推荐使用这种方式
+  1、在Podfile中添加一行语句：
+  pod 'OctoFlutter' 或 pod 'OctoFlutter', '~> 0.0.1'
+  2、在终端中运行命令进行安装：
+  pod install 或 pod install --repo-update`
   res.ios_integration_content_2 = `  • OctoFlutter支持的最小系统版本为iOS 10.0
   • OctoFlutter不支持iOS模拟器，请使用真机调试
   `
@@ -280,9 +278,9 @@ function generateZh() {
   res.ios_integration_rich_3 = `\n3、XCode项目设置
   • "General" - "Frameworks,Libraries,and Embedded Content" - "OctoFlutter.framework"设为"Embed & Sign"
   • "Build Settings" - "Enable Bitcode"设为"NO"
-  • "Build Settings" - "Validate Workspace"设为"YES"
-4、接入代码
-  • 构建OFOpenConfig，参考本工程的`
+  • "Build Settings" - "Validate Workspace"设为"YES"`
+
+  res.ios_integration_rich_4_ = '  • 构建OFOpenConfig，参考本工程的'
   res.ios_integration_rich_4 = 'OFOpenManager'
   res.ios_integration_rich_5 = '\n  • 创建OFAppEngine，参考本工程的'
   res.ios_integration_rich_6 =
@@ -490,21 +488,17 @@ function generateEn() {
     '\n8.If you want to debug js on mobile, implement DevEnvSupplier & DevEnvProvider , you can refer to '
   res.android_integration_rich_12 = 'AppBundleDevSupplier'
 
+  res.ios_integration_0 = 'Automatic Integration'
   res.ios_integration_1 = 'Simple Integration'
-  res.ios_integration_2 = 'Precautions'
+  res.ios_integration_2 = 'Code'
+  res.ios_integration_3 = 'Precautions'
 
-  res.ios_integration_content_1 = `  1. Open an iOS project. If you don't already have one, please create a new project
-  2. Add 'OctoFlutter.framework' to your project by "Add Files to", you can find it in the 'artifact' folder
-  3. XCode project settings
-    • "General" - "Frameworks, Libraries, and Embedded Content" - "OctoFlutter. framework" set to "Embedde & Sign"
-    • "Build Settings" - "Enable Bitcode" set to "NO"
-    • "Build Settings" - "Validate Workspace" set to "YES"
-  4. Code
-    • Build OFOpenConfig, refer to the code of OFOpenManager in this project
-    • Create OFAppEngine, refer to the code of OFOpenManager in this project
-    • Use OFBaseViewController or a class that inherits from it, refer to the code of OFAppViewController and OFAppContainerController in this project
-    • Register channels (like plugins in Flutter), refer to the code of OFMCHttp and OFAppBundleMCVideo in this project
-  `
+  res.ios_integration_content_1 = `OctoFlutter is published through CocoaPods and can be automatically deployed after configuration. This method is recommended.
+  1. Add a line of statements in Podfile:
+  pod 'OctoFlutter' OR pod 'OctoFlutter', '~> 0.0.1'
+  2. Run this command in the terminal to install：
+  pod install OR pod install --repo-update`
+
   res.ios_integration_content_2 = `  • The minimum system version supported by OctoFlutter is iOS 10.0
   • OctoFlutter does not support iOS Simulators, please use real machine debugging
   `
@@ -515,9 +509,9 @@ function generateEn() {
   res.ios_integration_rich_3 = `\n3. XCode project settings
     • "General" - "Frameworks, Libraries, and Embedded Content" - "OctoFlutter. framework" set to "Embedde & Sign"
     • "Build Settings" - "Enable Bitcode" set to "NO"
-    • "Build Settings" - "Validate Workspace" set to "YES"
-4. Code
-    • Build OFOpenConfig, refer to the code of `
+    • "Build Settings" - "Validate Workspace" set to "YES"`
+
+  res.ios_integration_rich_4_ = '  • Build OFOpenConfig, refer to the code of '
   res.ios_integration_rich_4 = 'OFOpenManager'
   res.ios_integration_rich_5 =
     '\n    • Create OFAppEngine, refer to the code of '
