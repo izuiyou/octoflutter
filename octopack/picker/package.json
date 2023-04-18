@@ -1,6 +1,6 @@
 {
   "name": "@octoflutter/picker",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "picker",
   "main": "index.ts",
   "sideEffects": false,

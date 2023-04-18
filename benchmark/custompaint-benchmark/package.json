@@ -1,6 +1,6 @@
 {
   "name": "@octoflutter/custompaint-benchmark",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "custompaint-benchmark",
   "main": "index.ts",
   "sideEffects": false,
@@ -11,6 +11,7 @@
     "build": "tsc",
     "dev": "run-s lint build",
     "dw": "octoflutter dev",
+    "dh": "RENDER_MODE=html octoflutter dev",
     "dm": "NODE_ENV=production W2DISK=true BUILD_FOR_MOBILE=true octoflutter dev"
   },
   "eslintIgnore": [

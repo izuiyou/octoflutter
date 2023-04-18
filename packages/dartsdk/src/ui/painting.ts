@@ -202,6 +202,26 @@ export class Image extends N.CkImage {
   }
 }
 
+if (!Object.prototype.hasOwnProperty.call(N.CkImage.prototype, 'width')) {
+  Object.defineProperty(N.CkImage.prototype, 'width', {
+    get: function () {
+      return N.octoGetImageWidth(this)
+    },
+    enumerable: false,
+    configurable: true,
+  })
+}
+
+if (!Object.prototype.hasOwnProperty.call(N.CkImage.prototype, 'height')) {
+  Object.defineProperty(N.CkImage.prototype, 'height', {
+    get: function () {
+      return N.octoGetImageHeight(this)
+    },
+    enumerable: false,
+    configurable: true,
+  })
+}
+
 export class ImageShader extends N.CkImageShader implements Shader {
   constructor(args: {
     image: Image
@@ -229,21 +249,6 @@ export class ImageShader extends N.CkImageShader implements Shader {
 //     return N.octoGetImageHeight(this)
 //   }
 // }
-
-Object.defineProperty(Image.prototype, 'width', {
-  get: function () {
-    return N.octoGetImageWidth(this)
-  },
-  enumerable: false,
-  configurable: true,
-})
-Object.defineProperty(Image.prototype, 'height', {
-  get: function () {
-    return N.octoGetImageHeight(this)
-  },
-  enumerable: false,
-  configurable: true,
-})
 
 // export class ImageShader extends N.CkImageShader implements Shader {
 //   constructor(args: {

@@ -1,6 +1,6 @@
 {
   "name": "@octoflutter/refresh",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "refresh",
   "main": "index.ts",
   "sideEffects": false,

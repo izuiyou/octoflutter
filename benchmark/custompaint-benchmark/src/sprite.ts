@@ -6,7 +6,7 @@ import {
   Rect,
   Size,
 } from '@octoflutter/dartsdk'
-import {decodeImageFromAsset} from '../../../packages/octo'
+import {decodeImageFromAsset} from '@octoflutter/octo'
 import {TransformComponent} from './components'
 
 export class Sprite {
@@ -25,6 +25,7 @@ export class Sprite {
       decodeImageFromAsset(
         src,
         (img) => {
+          console.log('w:' + img.width + ' h:' + img.height)
           resolve(new Sprite(img))
         },
         (error) => {

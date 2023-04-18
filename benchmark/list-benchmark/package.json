@@ -1,6 +1,6 @@
 {
   "name": "@octoflutter/list-benchmark",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "list-benchmark",
   "main": "index.ts",
   "sideEffects": false,

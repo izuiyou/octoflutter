@@ -28,6 +28,26 @@ module.exports = function (source, map) {
             `  
             
   export class Image extends N.HtmlImage { } 
+
+  if (!Object.prototype.hasOwnProperty.call(N.HtmlImage.prototype, 'width')) {
+    Object.defineProperty(N.HtmlImage.prototype, 'width', {
+      get: function () {
+        return N.octoGetImageWidth(this)
+      },
+      enumerable: false,
+      configurable: true,
+    })
+  }
+  
+  if (!Object.prototype.hasOwnProperty.call(N.HtmlImage.prototype, 'height')) {
+    Object.defineProperty(N.HtmlImage.prototype, 'height', {
+      get: function () {
+        return N.octoGetImageHeight(this)
+      },
+      enumerable: false,
+      configurable: true,
+    })
+  }
            
   export class ImageShader extends N.EngineImageShader implements Shader {
   constructor(args: {
