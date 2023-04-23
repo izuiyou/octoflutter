@@ -13,6 +13,22 @@ program
   .command('dev')
   .description('build develop enviroment')
   .action(function () {
+    const v_cli = packageMod.version
+    const fp = path.resolve(process.cwd(), 'package.json')
+    if (fs.existsSync(fp)) {
+      const packageApp = JSON.parse(fs.readFileSync(fp))
+      const dep = packageApp['dependencies']
+      if (dep !== null && dep !== undefined) {
+        const v_pkgs = dep['@octoflutter/flutter']
+        if (v_cli !== v_pkgs && !v_pkgs.includes('workspace')) {
+          console.warn(
+            '!!! @octoflutter/cli version not match with @octoflutter/flutter, please keep octoflutter series packages at same version.'
+          )
+          process.exit(1)
+        }
+      }
+    }
+
     const nodeArgs = []
     const result = spawn.sync(
       process.execPath,

@@ -1,4 +1,9 @@
-import {isNullOrUndefined, Size, VoidCallback} from '@octoflutter/dartsdk'
+import {
+  assert,
+  isNullOrUndefined,
+  Size,
+  VoidCallback,
+} from '@octoflutter/dartsdk'
 import {Key, LocalKey, octoKey} from '../foundation/key'
 import {RenderObject} from '../rendering/object'
 
@@ -213,6 +218,23 @@ export class BuildContext extends N.OctoBuildContext {
   private [octoAnimatedListState]() {
     return super.wcc()
   }
+
+  dependOnInheritedWidgetOfExactType<T extends InheritedWidget>(
+    nameOfT: string,
+    aspect?: any
+  ): T | null {
+    return super.wcd(nameOfT, aspect)
+  }
+
+  findAncestorStateOfType<T extends State<StatefulWidget>>(
+    nameOfT: string
+  ): T | null {
+    return super.wce(nameOfT)
+  }
+
+  findAncestorWidgetOfExactType<T extends Widget>(nameOfT: string): T | null {
+    return super.wcf(nameOfT)
+  }
 }
 
 export type WidgetBuilder = (context: BuildContext) => Widget
@@ -228,3 +250,24 @@ export type NullableIndexedWidgetBuilder = (
   context: BuildContext,
   index: number
 ) => Widget | null | undefined
+
+export abstract class InheritedWidget extends N.OctoInheritedWidget {
+  constructor(args?: {key?: Key; child: Widget}) {
+    super(args?.child, args?.key?.[octoKey])
+    assert(
+      !isNullOrUndefined(args?.child),
+      this.constructor.name + ' child must not be null'
+    )
+  }
+
+  private wcg(oldWidget) {
+    return this.updateShouldNotify(oldWidget)
+  }
+
+  abstract updateShouldNotify(oldWidget: InheritedWidget): boolean
+}
+
+// OctoInheritedWidget: function OctoInheritedWidget(t0, t1) {
+//   this.child = t0;
+//   this.key0 = t1;
+// },

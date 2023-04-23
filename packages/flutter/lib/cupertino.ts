@@ -1,4 +1,5 @@
 export {CupertinoApp} from './src/cupertino/app'
+export {DefaultCupertinoLocalizations} from './src/cupertino/localizations'
 export {
   CupertinoSliverRefreshControl,
   RefreshCallback,

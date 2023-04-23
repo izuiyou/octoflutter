@@ -34,7 +34,7 @@ import {
 import {MyHeaderDelegate} from './persistent_header'
 
 export class PageNestedRefresh extends StatefulWidget {
-  createState(): State<any> {
+  createState(): State<PageNestedRefresh> {
     return new PageNestedRefreshState()
   }
 }
@@ -165,7 +165,7 @@ export class ItemPageContentState extends State<ItemPageContent> {
             if (this.mounted) {
               this.setState(() => {})
             }
-          }, 2000)
+          }, 500)
         },
         onLoading: () => {
           //mock loadmore
@@ -191,7 +191,7 @@ export class ItemPageContentState extends State<ItemPageContent> {
             if (this.mounted) {
               this.setState(() => {})
             }
-          }, 2000)
+          }, 500)
         },
         child: ListView.builder({
           scrollDirection: Axis.vertical,

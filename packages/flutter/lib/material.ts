@@ -11,6 +11,7 @@ export {BottomNavigationBarThemeData} from './src/material/bottom_navigation_bar
 export {
   BottomNavigationBarLandscapeLayout,
   BottomNavigationBarType,
+  BottomNavigationBar,
 } from './src/material/bottom_navigation_bar'
 export {BottomSheetThemeData} from './src/material/bottom_sheet_theme'
 export {ButtonBarThemeData} from './src/material/button_bar_theme'
@@ -77,6 +78,7 @@ export {
   InputDecorationTheme,
 } from './src/material/input_decorator'
 export {ListTileThemeData} from './src/material/list_tile'
+export {DefaultMaterialLocalizations} from './src/material/material_localizations'
 export {
   MaterialState,
   MaterialStateProperty,

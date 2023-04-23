@@ -27,10 +27,10 @@ import {
   Stack,
   StatefulWidget,
   StatelessWidget,
-  Text,
   TickerProviderStateMixin,
   Transform,
   Widget,
+  Text,
 } from '@octoflutter/flutter'
 import {OctoImage} from '@octoflutter/octo'
 
@@ -44,7 +44,7 @@ class MyClipper extends CustomClipper<Rect> {
   }
 }
 
-class MyAnimWidget extends StatefulWidget {
+export class MyAnimWidget extends StatefulWidget {
   public readonly duration: number
 
   constructor(duration?: number) {
@@ -140,13 +140,11 @@ class _MyAnimState extends TickerProviderStateMixin<MyAnimWidget> {
   }
 }
 
-export class PageAnimation extends StatelessWidget {
+export class PageAnimationTest extends StatelessWidget {
   build(context: BuildContext): Widget {
     return new Scaffold({
       backgroundColor: Colors.white,
-      appBar: new AppBar({
-        title: new Text('PageAnimation'),
-      }),
+      appBar: new AppBar({title: new Text('PageAnimation')}),
       body: new Container({
         child: new MyAnimWidget(),
         alignment: Alignment.center,

@@ -17,11 +17,11 @@ import {
 } from '@octoflutter/flutter'
 import {OctoImage} from '@octoflutter/octo'
 
-export class PageColorFilter extends StatelessWidget {
+export class PageColorFilterd extends StatelessWidget {
   build(context: BuildContext): Widget {
     return new Scaffold({
       backgroundColor: Colors.white,
-      appBar: new AppBar({title: new Text('PageColorFilter')}),
+      appBar: new AppBar({title: new Text('PageColorFilterd')}),
       body: new Container({
         child: new SingleChildScrollView({
           child: new Row({

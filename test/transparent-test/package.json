@@ -1,6 +1,6 @@
 {
   "name": "@octoflutter/transparent-test",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "transparent test for octoflutter",
   "main": "index.ts",
   "sideEffects": false,

@@ -15,11 +15,11 @@ import {
 } from '@octoflutter/flutter'
 import {OctoImage} from '@octoflutter/octo'
 
-export class PageImageFilter extends StatelessWidget {
+export class PageBackdropFilter extends StatelessWidget {
   build(context: BuildContext): Widget {
     return new Scaffold({
       backgroundColor: Colors.white,
-      appBar: new AppBar({title: new Text('PageImageFilter')}),
+      appBar: new AppBar({title: new Text('BackdropFilter')}),
       body: new Container({
         child: new Stack({
           alignment: Alignment.center,

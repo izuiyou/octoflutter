@@ -76,6 +76,7 @@ export {
   WidgetsBinding,
   WidgetsBindingObserver,
 } from './src/widgets/binding'
+export {BottomNavigationBarItem} from './src/widgets/bottom_navgation_bar_item'
 export {ColorFiltered} from './src/widgets/color_filter'
 export {Container} from './src/widgets/container'
 export {DismissDirection} from './src/widgets/dismissible'
@@ -99,6 +100,7 @@ export {
   IndexedWidgetBuilder,
   NullableIndexedWidgetBuilder,
   octoContext,
+  InheritedWidget,
 } from './src/widgets/framework'
 export {GestureDetector} from './src/widgets/gesture_detector'
 export {GridPaper} from './src/widgets/grid_paper'
@@ -121,6 +123,10 @@ export {
   ListWheelChildLoopingListDelegate,
   ListWheelScrollView,
 } from './src/widgets/list_wheel_scroll_view'
+export {
+  DefaultWidgetsLocalizations,
+  LocalizationsDelegate,
+} from './src/widgets/localizations'
 export {
   MediaQueryData,
   MediaQuery,

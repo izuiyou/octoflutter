@@ -5687,7 +5687,7 @@ v.y.je(0,0)}}}}
 var z=a.updateTypes(["Flw?(KWE,d3M?)","a2j(d3M)","~()","a2j(XB)","Ij(Ij,kWQ)","c8(iN)","@(T8C<@,@>)","a2j(ujA?)","Ij(tn,tn)","Ij(tn?,tn?)","~(tA)","~(Duration)","b8<WyQ>()","~(Ij,~()?,~(qU)?)","a2j()","~(OctoCanvas,Ij,Ij)","~(CP5)","~(~(qU))","~(qU)","~(tn?)","b8<tA>(WyQ)","OctoFlareActor(T8C<@,@>)","OctoFlareActor(Ij,tDu?,qU?,qU?,AQy?,Alignment?,a2j?,a2j?,A27?,~(qU)?,Color?,a2j?,a2j?,qU?,a2j?)","FlareCacheBuilder(T8C<@,@>)"])
 PART1.ela.prototype={
 $1(d){return d<0||d>=this.a.length},
-$S:601}
+$S:606}
 PART1.na.prototype={
 $1(d){var x=d==null?null:N.mk(d.cx,"_name")
 return x===this.a},
@@ -5744,13 +5744,13 @@ $2(d,e){return e===this.b},
 $S(){return N.Lh(this.a).CT("a2j(tDu,xV.T)")}}
 PART1.As.prototype={
 $1(d){return d.VO()},
-$S:602}
+$S:607}
 PART1.Nyk.prototype={
 $1(d){return d.gIr(d)},
-$S:603}
+$S:608}
 PART1.dR.prototype={
 $1(d){J.Qe(N.yn().$2$2(PART1.YW(),d,y.T,y.c),new PART1.zJ(this.a,this.b),y.aT)},
-$S:135}
+$S:229}
 PART1.zJ.prototype={
 $1(d){return this.a.uZ(d,this.b)},
 $S:z+10}
@@ -5758,7 +5758,7 @@ PART1.I7.prototype={
 $1(d){var x=this.a
 x.d=this.b
 x.Rl()},
-$S:111}
+$S:129}
 PART1.EOL.prototype={
 $0(){this.a.d=this.b},
 $S:0}
@@ -6036,7 +6036,7 @@ w($,"hTa","fg",()=>$.el()*N.Q5(2)*0.5)
 w($,"A2v","BG",()=>PART1.Na(N.J([0,1,2,3],y.t),N.J([PART1_C.aC,PART1_C.rH,PART1_C.Me,PART1_C.fy],N.lRH("jd<VmT>")),y.S,N.lRH("VmT")))
 x($,"ujo","mB",()=>{var v=y.o
 return new PART1.lsS(N.F(N.lRH("tDu"),v),N.A(v))})})()}
-$__dart_deferred_initializers__["GXjbvFu4+t/Fcjdmhq2bbiac/go="] = $__dart_deferred_initializers__.current
+$__dart_deferred_initializers__["d+voLvDMghr6Y5wDvTlxOAeix4M="] = $__dart_deferred_initializers__.current
 
-window.init.initializeLoadedHunk("GXjbvFu4+t/Fcjdmhq2bbiac/go=");
+window.init.initializeLoadedHunk("d+voLvDMghr6Y5wDvTlxOAeix4M=");
 

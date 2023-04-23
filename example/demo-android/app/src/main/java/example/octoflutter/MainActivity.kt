@@ -66,11 +66,6 @@ class MainActivity : AppCompatActivity() {
                 LocalConfig.createUri(LocalConfig.kBundleOctopack, false),
                 AppBundleActivity::class.java
             )
-//            ambient.launch(
-//                this,
-//                LocalConfig.createUri(LocalConfig.kBundleFlutter, false),
-//                AppBundleActivity::class.java
-//            )
         }
 
         tv_remote_appbundle.setOnClickListener {

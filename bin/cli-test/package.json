@@ -1,6 +1,6 @@
 {
   "name": "@octoflutter/cli-test",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "cli-test",
   "main": "index.ts",
   "sideEffects": false,

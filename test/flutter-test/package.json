@@ -1,6 +1,6 @@
 {
   "name": "@octoflutter/flutter-test",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "octoflutter test in complex scenarios",
   "main": "index.ts",
   "sideEffects": false,
@@ -32,6 +32,6 @@
   },
   "octo": {
     "assets": "./assets",
-    "fullScreen": "true"
+    "fullScreen": "false"
   }
 }
