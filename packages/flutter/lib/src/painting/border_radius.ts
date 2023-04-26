@@ -1,6 +1,11 @@
 import {Radius} from '@octoflutter/dartsdk'
 
-export class BorderRadius extends N.BorderRadius {
+export abstract class BorderRadiusGeometry {}
+
+export class BorderRadius
+  extends N.BorderRadius
+  implements BorderRadiusGeometry
+{
   constructor(args?: {
     topLeft?: Radius
     topRight?: Radius
@@ -58,7 +63,10 @@ export class BorderRadius extends N.BorderRadius {
   }
 }
 
-export class BorderRadiusDirectional extends N.BorderRadiusDirectional {
+export class BorderRadiusDirectional
+  extends N.BorderRadiusDirectional
+  implements BorderRadiusGeometry
+{
   constructor(args?: {
     topStart?: Radius
     topEnd?: Radius
@@ -121,5 +129,3 @@ export class BorderRadiusDirectional extends N.BorderRadiusDirectional {
     })
   }
 }
-
-export type BorderRadiusGeometry = BorderRadiusDirectional | BorderRadius

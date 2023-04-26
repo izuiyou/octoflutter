@@ -4,7 +4,12 @@ import {Size} from '@octoflutter/dartsdk'
 import {AppBar} from '../material/app_bar'
 import {Tab, TabBar} from '../material/tabs'
 
-export class PreferredSize extends N.PreferredSize {
+export abstract class PreferredSizeWidget {}
+
+export class PreferredSize
+  extends N.PreferredSize
+  implements PreferredSizeWidget
+{
   constructor(args: {key?: Key; child: Widget; preferredSize: Size}) {
     super(args.child, args.preferredSize, args.key?.[octoKey])
   }
@@ -15,5 +20,3 @@ export class PreferredSize extends N.PreferredSize {
 //     this.preferredSize = t1;
 //     this.key = t2;
 //   },
-
-export type PreferredSizeWidget = PreferredSize | AppBar | Tab | TabBar

@@ -2,6 +2,7 @@ import {
   BlendMode,
   FontWeight,
   Gradient,
+  Image,
   ImageShader,
   Matrix4,
   Offset,
@@ -29,7 +30,6 @@ import {
   Widget,
 } from '@octoflutter/flutter'
 import {decodeImageFromAsset} from '@octoflutter/octo'
-import {Image} from '@octoflutter/dartsdk'
 
 class _PageShaderMaskState extends State<PageShaderMask> {
   image: Image

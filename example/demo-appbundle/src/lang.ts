@@ -268,8 +268,8 @@ function generateZh() {
   pod 'OctoFlutter' 或 pod 'OctoFlutter', '~> 0.0.1'
   2、在终端中运行命令进行安装：
   pod install 或 pod install --repo-update`
-  res.ios_integration_content_2 = `  • OctoFlutter支持的最小系统版本为iOS 10.0
-  • OctoFlutter不支持iOS模拟器，请使用真机调试
+  res.ios_integration_content_2 = `  • OctoFlutter支持的真机最小系统版本为iOS 10.0
+  • OctoFlutter支持iOS模拟器，最小系统版本为iOS 13.0
   `
 
   res.ios_integration_rich_1 = `1、打开iOS项目，如果还没有，请创建一个新的项目
@@ -499,8 +499,8 @@ function generateEn() {
   2. Run this command in the terminal to install：
   pod install OR pod install --repo-update`
 
-  res.ios_integration_content_2 = `  • The minimum system version supported by OctoFlutter is iOS 10.0
-  • OctoFlutter does not support iOS Simulators, please use real machine debugging
+  res.ios_integration_content_2 = `  • The minimum system version supported by OctoFlutter for real machines is iOS 10.0
+  • OctoFlutter support iOS Simulators, with a minimum system version of iOS 13.0
   `
 
   res.ios_integration_rich_1 = `1. Open an iOS project. If you don't already have one, please create a new project

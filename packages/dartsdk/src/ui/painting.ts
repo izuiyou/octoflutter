@@ -133,6 +133,12 @@ export enum BlendMode {
   luminosity = C.BlendMode_28,
 }
 
+export class MaskFilter {
+  static blur = (style: BlurStyle, sigma: number): MaskFilter => {
+    return N.maskFilterInstance(style, sigma)
+  }
+}
+
 export class ImageFilter {
   static blur(args?: {sigmaX?: number; sigmaY?: number; tileMode?: TileMode}) {
     return N.imageFilterBlurInstance(
@@ -178,8 +184,6 @@ export enum TileMode {
   mirror = C.TileMode_2,
   decal = C.TileMode_3,
 }
-
-// export type Shader = Gradient | ImageShader
 
 export abstract class Shader {}
 
@@ -410,8 +414,6 @@ export enum ClipOp {
   intersect = C.ClipOp_1,
 }
 
-export const octoPaintKey = Symbol('octoPaintKey')
-
 export class Paint extends N.OctoPaint {
   private real: any
 
@@ -457,7 +459,27 @@ export class Paint extends N.OctoPaint {
     super.pti(value)
   }
 
-  private [octoPaintKey]() {
+  set maskFilter(value: MaskFilter | null) {
+    super.pti(value)
+  }
+
+  set shader(value: Shader | null) {
+    super.ptk(value)
+  }
+
+  set colorFilter(value: ColorFilter | null) {
+    super.ptl(value)
+  }
+
+  set imageFilter(value: ImageFilter | null) {
+    super.ptm(value)
+  }
+
+  set invertColors(value: boolean) {
+    super.ptn(value)
+  }
+
+  paint() {
     return this.real
   }
 }

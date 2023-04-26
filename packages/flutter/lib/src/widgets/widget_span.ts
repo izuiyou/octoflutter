@@ -1,8 +1,9 @@
 import {PlaceholderAlignment, TextBaseline} from '@octoflutter/dartsdk'
 import {TextStyle} from '../painting/text_style'
 import {Widget} from './framework'
+import {InlineSpan} from '../painting/inline_span'
 
-export class WidgetSpan extends N.WidgetSpan {
+export class WidgetSpan extends N.WidgetSpan implements InlineSpan {
   constructor(args: {
     child: Widget
     alignment?: PlaceholderAlignment

@@ -11,6 +11,14 @@
 static const int OctoVersion = 6;
 
 NS_ASSUME_NONNULL_BEGIN
+
+// 模拟器中运行时，需保证系统大于等于iOS 13
+typedef enum {
+    OFRenderAPI_Software = 0,
+    OFRenderAPI_Metal = 1,
+    OFRenderAPI_OpenGLES = 2,
+} OFRenderAPI;
+
 typedef void (^ExternImageCompletionBlock)(UIImage * _Nullable image, NSError * _Nullable error);
 typedef void (^UnzipCompletionBlock)(NSString *path, BOOL succeeded, NSError * _Nullable error);
 
@@ -26,6 +34,9 @@ typedef void (^UnzipCompletionBlock)(NSString *path, BOOL succeeded, NSError * _
 
 // 是否将app脚本保存至文件，默认为否
 @property (nonatomic, assign) BOOL saveAppJS;
+
+// default is OFRenderAPI_OpenGLES
+@property (nonatomic, assign) OFRenderAPI renderAPI;
 
 // 外部可接受js抛出的异常
 @property (nonatomic, copy) void (^jsExceptionBlock)(NSString *exception);

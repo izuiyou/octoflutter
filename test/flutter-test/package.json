@@ -1,6 +1,6 @@
 {
   "name": "@octoflutter/flutter-test",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "octoflutter test in complex scenarios",
   "main": "index.ts",
   "sideEffects": false,
@@ -25,7 +25,8 @@
     "@octoflutter/lottie": "workspace:../../octopack/lottie",
     "@octoflutter/photo": "workspace:../../octopack/photo",
     "@octoflutter/picker": "workspace:../../octopack/picker",
-    "@octoflutter/refresh": "workspace:../../octopack/refresh"
+    "@octoflutter/refresh": "workspace:../../octopack/refresh",
+    "@octoflutter/staggered": "workspace:../../octopack/staggered"
   },
   "devDependencies": {
     "@octoflutter/cli": "workspace:../../bin/cli"

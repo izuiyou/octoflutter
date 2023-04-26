@@ -24,7 +24,7 @@ export {
   Path,
   Canvas,
   BlurStyle,
-  octoPaintKey,
+  MaskFilter,
 } from './ui/painting'
 export {
   VoidCallback,

@@ -1,14 +1,13 @@
 import {
+  Color,
   FontStyle,
   FontWeight,
+  Locale,
+  Paint,
   TextBaseline,
   TextDecoration,
   TextDecorationStyle,
   TextLeadingDistribution,
-  Locale,
-  octoPaintKey,
-  Color,
-  Paint,
 } from '@octoflutter/dartsdk'
 import {TextOverflow} from '../rendering/paragraph'
 
@@ -66,8 +65,8 @@ export class TextStyle extends N.TextStyle {
     package?: string
     overflow?: TextOverflow
   }) {
-    const fp = args?.foreground?.[octoPaintKey]() ?? null
-    const bp = args?.background?.[octoPaintKey]() ?? null
+    const fp = args?.foreground?.paint() ?? null
+    const bp = args?.background?.paint() ?? null
     super(
       args?.inherit ?? true,
       args?.color,

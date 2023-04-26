@@ -25,7 +25,7 @@ export class PageAppBar extends StatelessWidget {
               window.console.log('Icons.add click')
               ScaffoldMessenger.of(context).showSnackBar(
                 new SnackBar({
-                  content: new Text('Icons.add Clicled'),
+                  content: new Text('Icons.add Clicked'),
                 })
               )
             },
@@ -36,7 +36,7 @@ export class PageAppBar extends StatelessWidget {
               window.console.log('Icons.arrow_downward click')
               ScaffoldMessenger.of(context).showSnackBar(
                 new SnackBar({
-                  content: new Text('Icons.arrow_downward Clicled'),
+                  content: new Text('Icons.arrow_downward Clicked'),
                 })
               )
             },
@@ -47,7 +47,7 @@ export class PageAppBar extends StatelessWidget {
               window.console.log('Icons.arrow_upward click')
               ScaffoldMessenger.of(context).showSnackBar(
                 new SnackBar({
-                  content: new Text('Icons.arrow_upward Clicled'),
+                  content: new Text('Icons.arrow_upward Clicked'),
                 })
               )
             },

@@ -1,47 +1,46 @@
-import {BuildContext, Widget, WidgetBuilder} from './framework'
 import {
-  Rect,
-  RRect,
-  Size,
-  Offset,
   BlendMode,
-  Color,
-  Shader,
   Clip,
+  Color,
   FilterQuality,
   ImageFilter,
-  Path,
-  TextDirection,
-  TextBaseline,
-  TextAlign,
-  TextHeightBehavior,
-  TextDecoration,
   Locale,
   Matrix4,
+  Offset,
+  Path,
+  RRect,
+  Rect,
+  Shader,
+  Size,
+  TextAlign,
+  TextBaseline,
+  TextDirection,
+  TextHeightBehavior,
 } from '@octoflutter/dartsdk'
 import {Key, octoKey} from '../foundation/key'
+import {Colors} from '../material/colors'
 import {Alignment, AlignmentDirectional} from '../painting/alignment'
-import {
-  CrossAxisAlignment,
-  MainAxisAlignment,
-  MainAxisSize,
-  FlexFit,
-} from '../rendering/flex'
 import {Axis, VerticalDirection} from '../painting/basic_types'
-import {StackFit} from '../rendering/stack'
-import {CustomClipper} from '../rendering/proxy_box'
 import {BorderRadius} from '../painting/border_radius'
+import {BoxShape} from '../painting/box_border'
 import {BoxFit} from '../painting/box_fit'
-import {EdgeInsets, EdgeInsetsGeometry} from '../painting/edge_insets'
-import {WrapAlignment, WrapCrossAlignment} from '../rendering/wrap'
-import {BoxConstraints} from '../rendering/box'
-import {InlineSpan} from '../painting/text_span'
-import {TextOverflow} from '../rendering/paragraph'
+import {EdgeInsetsGeometry} from '../painting/edge_insets'
+import {InlineSpan} from '../painting/inline_span'
 import {StrutStyle} from '../painting/strut_style'
 import {TextWidthBasis} from '../painting/text_painter'
+import {BoxConstraints} from '../rendering/box'
 import {CustomPainter} from '../rendering/custom_paint'
-import {BoxShape} from '../painting/box_border'
-import {Colors} from '../material/colors'
+import {
+  CrossAxisAlignment,
+  FlexFit,
+  MainAxisAlignment,
+  MainAxisSize,
+} from '../rendering/flex'
+import {TextOverflow} from '../rendering/paragraph'
+import {CustomClipper} from '../rendering/proxy_box'
+import {StackFit} from '../rendering/stack'
+import {WrapAlignment, WrapCrossAlignment} from '../rendering/wrap'
+import {BuildContext, Widget, WidgetBuilder} from './framework'
 
 export class Opacity extends N.Opacity {
   constructor(args: {

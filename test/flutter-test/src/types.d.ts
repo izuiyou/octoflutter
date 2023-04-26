@@ -10,6 +10,8 @@ declare const LOTTIE: any
 declare const LOTTIE_C: any
 declare const REFRESH: any
 declare const REFRESH_C: any
+declare const STAGGERED: any
+declare const STAGGERED_C: any
 declare var OctoAppBundleId: any
 declare const kIsWeb: boolean
 declare const kHtmlMode: boolean

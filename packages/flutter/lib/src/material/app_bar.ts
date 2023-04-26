@@ -10,7 +10,7 @@ import {PreferredSizeWidget} from '../widgets/preferred_size'
 import {kToolbarHeight} from './constants'
 import {TextTheme} from './text_theme'
 
-export class AppBar extends N.AppBar {
+export class AppBar extends N.AppBar implements PreferredSizeWidget {
   constructor(args?: {
     key?: Key
     leading?: Widget

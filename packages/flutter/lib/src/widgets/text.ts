@@ -7,7 +7,7 @@ import {
 import {Key, octoKey} from '../foundation/key'
 import {StrutStyle} from '../painting/strut_style'
 import {TextWidthBasis} from '../painting/text_painter'
-import {InlineSpan} from '../painting/text_span'
+import {InlineSpan} from '../painting/inline_span'
 import {TextStyle} from '../painting/text_style'
 import {TextOverflow} from '../rendering/paragraph'
 import {Widget} from './framework'

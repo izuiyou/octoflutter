@@ -1,6 +1,5 @@
 import {Duration} from '@octoflutter/dartsdk'
 import {convertDuration} from '../../utils'
-import {TickerProviderStateMixin} from '../widgets/ticker_provider'
 export type TickerCallback = (elapsed: Duration) => void
 
 export class Ticker extends N.OctoTicker {
@@ -35,4 +34,4 @@ export class Ticker extends N.OctoTicker {
   }
 }
 
-export type TickerProvider = TickerProviderStateMixin<any>
+export abstract class TickerProvider {}

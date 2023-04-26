@@ -17,7 +17,7 @@ import {
 } from '@octoflutter/flutter'
 import {DelayWidget, OctoImage} from '@octoflutter/octo'
 
-const url_img =
+export const url_img =
   'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F0116405d84f975a801211d537707c9.gif&refer=http%3A%2F%2Fimg.zcool.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1666181952&t=9dee779bdb8d192d9c30dc60c8b199c4'
 
 const url_img1 =

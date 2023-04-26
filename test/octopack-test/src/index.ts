@@ -2,6 +2,7 @@ import {Color, Radius} from '@octoflutter/dartsdk'
 import {
   Alignment,
   AppBar,
+  Axis,
   BorderRadius,
   BuildContext,
   Center,
@@ -20,8 +21,8 @@ import {
   MaterialApp,
   Navigator,
   RawMaterialButton,
-  runApp,
   Scaffold,
+  SingleChildScrollView,
   State,
   StatefulWidget,
   StatelessWidget,
@@ -31,12 +32,14 @@ import {
   ThemeData,
   Widget,
   WidgetBuilder,
+  runApp,
 } from '@octoflutter/flutter'
 import {PageFlare} from './page_flare'
 import {PageLottie} from './page_lottie'
 import {PagePhoto} from './page_photo'
 import {PagePicker} from './page_picker'
 import {PageRefresh} from './page_refresh'
+import {PageStaggered} from './page_staggered'
 
 function main() {
   runApp(new MyApp())
@@ -61,6 +64,7 @@ class MyApp extends StatelessWidget {
         ['/page_photo', (ctx) => new PagePhoto()],
         ['/page_picker', (ctx) => new PagePicker()],
         ['/page_refresh', (ctx) => new PageRefresh()],
+        ['/page_staggered', (ctx) => new PageStaggered()],
       ]),
     })
   }
@@ -95,30 +99,34 @@ class _MyHomePageState extends State<MyHomePage> {
         title: new Text(this.widget.title),
       }),
       body: new Center({
-        child: new Column({
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Image.asset('icon.png', {width: 100, height: 100}),
-            new Text('You have pushed the button this many times:', {
-              style: new TextStyle({
-                fontSize: 14,
-                color: Colors.black87,
+        child: new SingleChildScrollView({
+          scrollDirection: Axis.vertical,
+          child: new Column({
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset('icon.png', {width: 100, height: 100}),
+              new Text('You have pushed the button this many times:', {
+                style: new TextStyle({
+                  fontSize: 14,
+                  color: Colors.black87,
+                }),
               }),
-            }),
-            new Text(`${this._counter}`, {
-              style: new TextStyle({
-                fontSize: 14,
-                color: Colors.black87,
+              new Text(`${this._counter}`, {
+                style: new TextStyle({
+                  fontSize: 14,
+                  color: Colors.black87,
+                }),
               }),
-            }),
 
-            this.btnGo('GoToPageFlare', '/page_flare'),
-            this.btnGo('GoToPageLottie', '/page_lottie'),
-            this.btnGo('GoToPagePhoto', '/page_photo'),
-            this.btnGo('GoToPagePicker', '/page_picker'),
-            this.btnGo('GoToPageRefresh', '/page_refresh'),
-          ],
+              this.btnGo('GoToPageFlare', '/page_flare'),
+              this.btnGo('GoToPageLottie', '/page_lottie'),
+              this.btnGo('GoToPagePhoto', '/page_photo'),
+              this.btnGo('GoToPagePicker', '/page_picker'),
+              this.btnGo('GoToPageRefresh', '/page_refresh'),
+              this.btnGo('GoToPageStaggered', '/page_staggered'),
+            ],
+          }),
         }),
       }),
       floatingActionButton: new FloatingActionButton({

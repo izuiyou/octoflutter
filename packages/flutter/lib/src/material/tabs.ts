@@ -9,13 +9,14 @@ import {Widget} from '../widgets/framework'
 import {ScrollPhysics} from '../widgets/scroll_physics'
 import {MaterialStateProperty} from './material_state'
 import {TabController} from './tab_controller'
+import {PreferredSizeWidget} from '../widgets/preferred_size'
 
 export enum TabBarIndicatorSize {
   tab = C.TabBarIndicatorSize_0,
   label = C.TabBarIndicatorSize_1,
 }
 
-export class Tab extends N.Tab {
+export class Tab extends N.Tab implements PreferredSizeWidget {
   constructor(args: {
     key?: Key
     text?: string
@@ -55,7 +56,7 @@ export class Tab extends N.Tab {
 //     _.key0 = t5;
 //   },
 
-export class TabBar extends N.TabBar {
+export class TabBar extends N.TabBar implements PreferredSizeWidget {
   constructor(args: {
     key?: Key
     tabs: Array<Widget>

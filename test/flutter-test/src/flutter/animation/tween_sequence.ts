@@ -13,12 +13,13 @@ import {
   State,
   StatefulWidget,
   Text,
+  TickerProviderStateMixin,
   TweenSequence,
   TweenSequenceItem,
   Widget,
 } from '@octoflutter/flutter'
 
-class _PageTweenSequenceState extends State<PageTweenSequence> {
+class _PageTweenSequenceState extends TickerProviderStateMixin<PageTweenSequence> {
   animCtr: AnimationController
   anim: Animation<number>
 

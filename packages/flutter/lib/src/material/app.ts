@@ -16,6 +16,7 @@ import {
   RouteSettings,
 } from '../widgets/navigator'
 import {ThemeData} from './theme_data'
+import {ScrollBehavior} from '../widgets/scroll_configuration'
 
 export enum ThemeMode {
   system = C.ThemeMode_0,
@@ -179,4 +180,6 @@ export class MaterialApp extends N.MaterialApp {
 //   _.key0 = t34;
 // },
 
-export class MaterialScrollBehavior extends N.MaterialScrollBehavior {}
+export class MaterialScrollBehavior
+  extends N.MaterialScrollBehavior
+  implements ScrollBehavior {}

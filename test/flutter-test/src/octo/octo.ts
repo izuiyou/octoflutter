@@ -16,11 +16,13 @@ import {
 } from '@octoflutter/flutter'
 import {PageOctoList} from './octo_list'
 import {PageNestedRefresh} from './refresh/page_nested_refresh'
+import {PageStaggered, getStaggeredRoutes} from './staggered/staggered'
 import {PageTransformPageView} from './transform_pageview'
 
-export function getOctoRoutes(): Map<string, WidgetBuilder> {
+export function getInnerOctoRoutes(): Map<string, WidgetBuilder> {
   return new Map<string, WidgetBuilder>([
     ['/octo/refresh', (context: BuildContext) => new PageNestedRefresh()],
+    ['/octo/staggered', (context: BuildContext) => new PageStaggered()],
     ['/octo/list', (context: BuildContext) => new PageOctoList()],
     [
       '/octo/transform_pageview',
@@ -29,9 +31,16 @@ export function getOctoRoutes(): Map<string, WidgetBuilder> {
   ])
 }
 
+export function getOctoRoutes(): Map<string, WidgetBuilder> {
+  return new Map<string, WidgetBuilder>([
+    ...getInnerOctoRoutes(),
+    ...getStaggeredRoutes(),
+  ])
+}
+
 export class PageOcto extends StatelessWidget {
   build(context: BuildContext): Widget {
-    const keys = Array.from(getOctoRoutes().keys())
+    const keys = Array.from(getInnerOctoRoutes().keys())
 
     return new Scaffold({
       appBar: new AppBar({

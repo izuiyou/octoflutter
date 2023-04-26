@@ -1,7 +1,9 @@
 import {Color} from '@octoflutter/dartsdk'
-import {BorderSide, BorderStyle} from './borders'
+import {BorderSide, BorderStyle, ShapeBorder} from './borders'
 
-export class Border extends N.Border {
+export abstract class BoxBorder extends ShapeBorder {}
+
+export class Border extends N.Border implements BoxBorder {
   constructor(args?: {
     top?: BorderSide
     right?: BorderSide
@@ -36,7 +38,10 @@ export class Border extends N.Border {
   }
 }
 
-export class BorderDirectional extends N.BorderDirectional {
+export class BorderDirectional
+  extends N.BorderDirectional
+  implements BoxBorder
+{
   constructor(args?: {
     top?: BorderSide
     start?: BorderSide
@@ -51,8 +56,6 @@ export class BorderDirectional extends N.BorderDirectional {
     )
   }
 }
-
-export type BoxBorder = Border | BorderDirectional
 
 export enum BoxShape {
   rectangle = C.BoxShape_0,

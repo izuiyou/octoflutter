@@ -36,6 +36,7 @@ export {
   ActionChip,
   FilterChip,
 } from './src/material/chip'
+export {CircleAvatar} from './src/material/circle_avatar'
 export {ColorScheme} from './src/material/color_scheme'
 export {Colors, MaterialColor, MaterialAccentColor} from './src/material/colors'
 export {kToolbarHeight} from './src/material/constants'

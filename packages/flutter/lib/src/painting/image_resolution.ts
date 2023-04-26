@@ -1,6 +1,6 @@
-import {rootBundle} from '../services/asset_bundle'
+import {ImageProvider} from './image_provider'
 
-export class AssetImage extends N.AssetImage {
+export class AssetImage extends N.AssetImage implements ImageProvider {
   constructor(assetName: string, args?: {bundle?: any; package?: string}) {
     super(
       assetName,

@@ -74,5 +74,5 @@ config.appMCClassNames = @[
 
 
 ## 注意事项
- * OctoFlutter支持的最小系统版本为iOS 10.0
- * OctoFlutter不支持iOS模拟器，请使用真机调试
+ * OctoFlutter支持的真机最小系统版本为iOS 10.0
+ * OctoFlutter支持iOS模拟器，最小系统版本为iOS 13.0

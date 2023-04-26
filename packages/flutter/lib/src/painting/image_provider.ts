@@ -1,27 +1,31 @@
 import {Locale, Size, TextDirection} from '@octoflutter/dartsdk'
 import {TargetPlatform} from '../foundation/platform'
 import {AssetBundle, rootBundle} from '../services/asset_bundle'
-import {AssetImage} from './image_resolution'
 
-export class NetworkImage extends N.NetworkImage {
+export abstract class ImageProvider {}
+
+export class NetworkImage extends N.NetworkImage implements ImageProvider {
   constructor(url: string, args?: {scale?: number}) {
     super(url, args?.scale ?? 1.0)
   }
 }
 
-export class FileImage extends N.FileImage {
+export class FileImage extends N.FileImage implements ImageProvider {
   constructor(file: any, args?: {scale?: number}) {
     super(file, args?.scale ?? 1.0)
   }
 }
 
-export class MemoryImage extends N.MemoryImage {
+export class MemoryImage extends N.MemoryImage implements ImageProvider {
   constructor(bytes: any, args?: {scale?: number}) {
     super(bytes, args?.scale ?? 1.0)
   }
 }
 
-export class ExactAssetImage extends N.ExactAssetImage {
+export class ExactAssetImage
+  extends N.ExactAssetImage
+  implements ImageProvider
+{
   constructor(
     assetName: any,
     args?: {scale?: number; bundle?: any; package?: string}
@@ -34,13 +38,6 @@ export class ExactAssetImage extends N.ExactAssetImage {
     )
   }
 }
-
-export type ImageProvider =
-  | NetworkImage
-  | FileImage
-  | MemoryImage
-  | ExactAssetImage
-  | AssetImage
 
 export class ImageConfiguration extends N.ImageConfiguration {
   public readonly bundle?: AssetBundle

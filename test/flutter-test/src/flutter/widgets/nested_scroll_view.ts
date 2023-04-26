@@ -1,34 +1,23 @@
-import {Color, Duration, Size} from '@octoflutter/dartsdk'
+import {Color} from '@octoflutter/dartsdk'
 import {
   Alignment,
-  Animation,
-  AnimationController,
-  AnimationStatus,
   BoxDecoration,
   BuildContext,
-  Builder,
   CollapseMode,
-  ColoredBox,
   Colors,
-  ColorTween,
   Container,
   FlexibleSpaceBar,
-  GestureDetector,
-  kToolbarHeight,
   LinearGradient,
   ListView,
   NestedScrollView,
   Scaffold,
-  SizeTween,
   SliverAppBar,
-  Stack,
   State,
   StatefulWidget,
   StretchMode,
   Text,
-  TextStyle,
-  Visibility,
   Widget,
+  kToolbarHeight,
 } from '@octoflutter/flutter'
 
 export class PageNestedScrollView extends StatefulWidget {

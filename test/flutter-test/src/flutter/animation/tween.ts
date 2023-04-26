@@ -15,6 +15,7 @@ import {
   State,
   StatefulWidget,
   Text,
+  TickerProviderStateMixin,
   Tween,
   Widget,
 } from '@octoflutter/flutter'
@@ -47,7 +48,7 @@ class DataTween extends Tween<DataBean> {
   }
 }
 
-class _PageTweenState extends State<PageTween> {
+class _PageTweenState extends TickerProviderStateMixin<PageTween> {
   animCtr: AnimationController
   anim: Animation<DataBean>
 

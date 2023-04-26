@@ -16,10 +16,11 @@ import {
   TabBar,
   TabBarView,
   Text,
+  TickerProviderStateMixin,
   Widget,
 } from '@octoflutter/flutter'
 
-class _PageOpacityState extends State<PageOpacity> {
+class _PageOpacityState extends TickerProviderStateMixin<PageOpacity> {
   animation: Animation<number>
   ctrl: AnimationController
 

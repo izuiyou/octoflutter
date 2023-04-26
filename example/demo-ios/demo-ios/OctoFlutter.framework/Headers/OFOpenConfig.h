@@ -9,9 +9,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef enum {
+    OFOpenMode_Isolate = 0,
+    OFOpenMode_Shared = 1,
+} OFOpenMode;
+
 @interface OFOpenConfig : NSObject
 
-@property (nonatomic, assign) int      mode;//0 isolate, 1 shared
+// default is OFOpenMode_Isolate
+@property (nonatomic, assign) OFOpenMode    mode;
 
 // framework
 

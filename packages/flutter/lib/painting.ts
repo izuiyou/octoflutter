@@ -43,6 +43,8 @@ export {
   GradientRotation,
   GradientTransform,
   LinearGradient,
+  SweepGradient,
+  RadialGradient,
 } from './src/painting/gradient'
 export {
   ImageProvider,
@@ -53,8 +55,10 @@ export {
   ImageConfiguration,
 } from './src/painting/image_provider'
 export {AssetImage} from './src/painting/image_resolution'
+export {ImageErrorListener} from './src/painting/image_stream'
+export {InlineSpan} from './src/painting/inline_span'
 export {RoundedRectangleBorder} from './src/painting/rounded_rectangle_border'
 export {StrutStyle} from './src/painting/strut_style'
 export {TextWidthBasis, TextPainter} from './src/painting/text_painter'
-export {TextSpan, InlineSpan} from './src/painting/text_span'
+export {TextSpan} from './src/painting/text_span'
 export {TextStyle} from './src/painting/text_style'

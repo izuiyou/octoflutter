@@ -1,6 +1,6 @@
 {
   "name": "@octoflutter/dartsdk",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "dartsdk is a replactment of dart packages used by flutter, such as dart:ui, dart:math and so on.",
   "main": "index.ts",
   "sideEffects": false,

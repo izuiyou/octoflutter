@@ -74,5 +74,5 @@ config.appMCClassNames = @[
 
 
 ## Precautions
-   * The minimum system version supported by OctoFlutter is iOS 10.0
-   * OctoFlutter does not support iOS Simulators, please use real machine debugging
+   * The minimum system version supported by OctoFlutter for real machines is iOS 10.0
+   * OctoFlutter support iOS Simulators, with a minimum system version of iOS 13.0

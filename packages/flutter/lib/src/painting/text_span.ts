@@ -1,7 +1,7 @@
-import {WidgetSpan} from '../widgets/widget_span'
+import {InlineSpan} from './inline_span'
 import {TextStyle} from './text_style'
 
-export class TextSpan extends N.OctoTextSpan {
+export class TextSpan extends N.OctoTextSpan implements InlineSpan {
   constructor(args?: {
     text?: string
     children?: Array<InlineSpan>
@@ -25,8 +25,6 @@ export class TextSpan extends N.OctoTextSpan {
     super(real)
   }
 }
-
-export type InlineSpan = TextSpan | WidgetSpan
 
 // textSpanInstance: function(text, children, style, recognizer, mouseCursor, onEnter, onExit, semanticsLabel) {
 //     return N.TextSpan$(children, mouseCursor, onEnter, onExit, recognizer, semanticsLabel, style, text);

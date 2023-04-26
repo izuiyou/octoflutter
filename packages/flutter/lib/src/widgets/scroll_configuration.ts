@@ -1,6 +1,4 @@
-import {MaterialScrollBehavior} from '../material/app'
-
-export type ScrollBehavior = MaterialScrollBehavior
+export abstract class ScrollBehavior {}
 
 export enum AndroidOverscrollIndicator {
   stretch = C.AndroidOverscrollIndicator_0,

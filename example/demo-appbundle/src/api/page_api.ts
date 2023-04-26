@@ -121,22 +121,7 @@ class _PageApiState extends State<StatefulWidget> {
           target = target + content + '.html'
           break
         case 'types':
-          if (
-            'AlignmentGeometry' === content ||
-            'BorderRadiusGeometry' === content ||
-            'BoxBorder' === content ||
-            'EdgeInsetsGeometry' === content ||
-            'GradientTransform' === content ||
-            'ImageProvider' === content ||
-            'InlineSpan' === content ||
-            'SliverGridDelegate' === content ||
-            'SliverChildDelegate' === content ||
-            'ListWheelChildDelegate' === content
-          ) {
-            target = target + content + '-class.html'
-          } else {
-            target = target + content + '.html'
-          }
+          target = target + content + '.html'
           break
         case 'constants':
           if ('rootBundle' === content || 'defaultTargetPlatform' === content) {
@@ -147,9 +132,6 @@ class _PageApiState extends State<StatefulWidget> {
           break
       }
 
-      if (content === 'TickerProvider') {
-        target = ''
-      }
       return target
     } else if ('dartsdk' === this.item?.parent) {
       let target = 'https://api.flutter.dev/flutter/'

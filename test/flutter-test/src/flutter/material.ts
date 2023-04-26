@@ -23,6 +23,7 @@ import {PageChip} from './material/chip'
 import {PageTab} from './material/tabs'
 import {Color} from '@octoflutter/dartsdk'
 import {PageBottomNavigationBar} from './material/bottom_naviagtion_bar'
+import {PageCircleAvatar} from './material/circle_avatar'
 
 export function getMaterialRoutes(): Map<string, WidgetBuilder> {
   const innerRoutes = getMaterialInnerRoutes()
@@ -39,6 +40,10 @@ export function getMaterialInnerRoutes(): Map<string, WidgetBuilder> {
     ['/material/button', (context: BuildContext) => new PageButton()],
     ['/material/card', (context: BuildContext) => new PageCard()],
     ['/material/chip', (context: BuildContext) => new PageChip()],
+    [
+      '/material/circle_avatar',
+      (context: BuildContext) => new PageCircleAvatar(),
+    ],
     ['/material/drawer', (context: BuildContext) => new PageDrawer()],
     ['/material/scaffold', (context: BuildContext) => new PageScaffold()],
     ['/material/tab', (context: BuildContext) => new PageTab()],

@@ -41,7 +41,7 @@ import com.example.support.local.LocalAndRemoteAmbientImpl
 object LocalConfig {
 
     private val fwkInfo: FwkInfo =
-        FwkInfo("", "d2a64011b6577f4883dde071b3026980", 9, OctoVersion.VERSION)
+        FwkInfo("", "f30d61a4afa87af20ab7c576b1c51f42", 9, OctoVersion.VERSION)
 
     const val kBundleOctopack = "octoflutter_octopack_test"
     const val kBundleTransparent = "octoflutter_transparent_test"
@@ -64,7 +64,7 @@ object LocalConfig {
         ambient.addBundleInfo(
             createBundleInfo(
                 kBundleOctopack,
-                "18e9e62eb1092bfb319cd32aad4aed19",
+                "2fb93865b7edf1bd546d89eb2795ac15",
                 BundleConfig()
             )
         )

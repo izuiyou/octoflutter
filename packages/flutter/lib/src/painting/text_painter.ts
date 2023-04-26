@@ -9,7 +9,7 @@ import {
   TextPosition,
 } from '@octoflutter/dartsdk'
 import {StrutStyle} from './strut_style'
-import {InlineSpan} from './text_span'
+import {InlineSpan} from './inline_span'
 
 export enum TextWidthBasis {
   parent = C.TextWidthBasis_0,

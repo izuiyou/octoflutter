@@ -1,4 +1,9 @@
-export class SliverGridDelegateWithFixedCrossAxisCount extends N.SliverGridDelegateWithFixedCrossAxisCount {
+export abstract class SliverGridDelegate {}
+
+export class SliverGridDelegateWithFixedCrossAxisCount
+  extends N.SliverGridDelegateWithFixedCrossAxisCount
+  implements SliverGridDelegate
+{
   constructor(args: {
     crossAxisCount: number
     mainAxisSpacing?: number
@@ -25,7 +30,10 @@ export class SliverGridDelegateWithFixedCrossAxisCount extends N.SliverGridDeleg
 //     _.mainAxisExtent = t4;
 //   },
 
-export class SliverGridDelegateWithMaxCrossAxisExtent extends N.SliverGridDelegateWithMaxCrossAxisExtent {
+export class SliverGridDelegateWithMaxCrossAxisExtent
+  extends N.SliverGridDelegateWithMaxCrossAxisExtent
+  implements SliverGridDelegate
+{
   constructor(args: {
     maxCrossAxisExtent: number
     mainAxisSpacing?: number
@@ -51,7 +59,3 @@ export class SliverGridDelegateWithMaxCrossAxisExtent extends N.SliverGridDelega
 //     _.childAspectRatio = t3;
 //     _.mainAxisExtent = t4;
 //   },
-
-export type SliverGridDelegate =
-  | SliverGridDelegateWithMaxCrossAxisExtent
-  | SliverGridDelegateWithFixedCrossAxisCount

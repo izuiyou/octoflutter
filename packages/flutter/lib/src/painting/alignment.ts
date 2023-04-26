@@ -1,6 +1,8 @@
 import {Offset, Size} from '@octoflutter/dartsdk'
 
-export class Alignment extends N.Alignment {
+export abstract class AlignmentGeometry {}
+
+export class Alignment extends N.Alignment implements AlignmentGeometry {
   public readonly x: number
   public readonly y: number
 
@@ -44,7 +46,10 @@ export class Alignment extends N.Alignment {
   }
 }
 
-export class AlignmentDirectional extends N.AlignmentDirectional {
+export class AlignmentDirectional
+  extends N.AlignmentDirectional
+  implements AlignmentGeometry
+{
   public readonly start: number
   public readonly y: number
 
@@ -54,5 +59,3 @@ export class AlignmentDirectional extends N.AlignmentDirectional {
     this.y = y
   }
 }
-
-export type AlignmentGeometry = Alignment | AlignmentDirectional

@@ -1,6 +1,8 @@
 import {Rect} from '@octoflutter/dartsdk'
 
-export class EdgeInsets extends N.EdgeInsets {
+export abstract class EdgeInsetsGeometry {}
+
+export class EdgeInsets extends N.EdgeInsets implements EdgeInsetsGeometry {
   public readonly left: number
   public readonly top: number
   public readonly right: number
@@ -66,7 +68,10 @@ export class EdgeInsets extends N.EdgeInsets {
   }
 }
 
-export class EdgeInsetsDirectional extends N.EdgeInsetsDirectional {
+export class EdgeInsetsDirectional
+  extends N.EdgeInsetsDirectional
+  implements EdgeInsetsGeometry
+{
   public readonly start: number
   public readonly top: number
   public readonly end: number
@@ -102,5 +107,3 @@ export class EdgeInsetsDirectional extends N.EdgeInsetsDirectional {
     )
   }
 }
-
-export type EdgeInsetsGeometry = EdgeInsetsDirectional | EdgeInsets

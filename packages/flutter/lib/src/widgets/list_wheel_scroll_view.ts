@@ -5,19 +5,30 @@ import {BuildContext, NullableIndexedWidgetBuilder, Widget} from './framework'
 import {ScrollController} from './scroll_controller'
 import {ScrollPhysics} from './scroll_physics'
 
-export class ListWheelChildListDelegate extends N.ListWheelChildListDelegate {
+export abstract class ListWheelChildDelegate {}
+
+export class ListWheelChildListDelegate
+  extends N.ListWheelChildListDelegate
+  implements ListWheelChildDelegate
+{
   constructor(children: Array<Widget>) {
     super(children)
   }
 }
 
-export class ListWheelChildLoopingListDelegate extends N.ListWheelChildLoopingListDelegate {
+export class ListWheelChildLoopingListDelegate
+  extends N.ListWheelChildLoopingListDelegate
+  implements ListWheelChildDelegate
+{
   constructor(children: Array<Widget>) {
     super(children)
   }
 }
 
-export class ListWheelChildBuilderDelegate extends N.ListWheelChildBuilderDelegate {
+export class ListWheelChildBuilderDelegate
+  extends N.ListWheelChildBuilderDelegate
+  implements ListWheelChildDelegate
+{
   constructor(args: {
     builder: NullableIndexedWidgetBuilder
     childCount?: number
@@ -28,11 +39,6 @@ export class ListWheelChildBuilderDelegate extends N.ListWheelChildBuilderDelega
     super(cb, args.childCount)
   }
 }
-
-export type ListWheelChildDelegate =
-  | ListWheelChildListDelegate
-  | ListWheelChildLoopingListDelegate
-  | ListWheelChildBuilderDelegate
 
 export class ListWheelScrollView extends N.ListWheelScrollView {
   constructor(args: {

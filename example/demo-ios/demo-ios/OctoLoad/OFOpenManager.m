@@ -33,6 +33,7 @@
         self.octoVersion = OctoVersion;
         // 如果是共享模式，即使没在运行任何app，仍保留一个engine对象
         [OFAppEngineManager sharedInstance].keepOneSharedEngine = YES;
+//        [OFAppEngineManager sharedInstance].renderAPI = OFRenderAPI_Metal;
 #ifdef DEBUG
         // 打印js侧的log
 //        [OFAppEngineManager sharedInstance].showJSLog = YES;

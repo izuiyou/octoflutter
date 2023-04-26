@@ -3,6 +3,8 @@ import {Key, octoKey} from '../foundation/key'
 import {SliverGridDelegate} from '../rendering/sliver_grid'
 import {BuildContext, NullableIndexedWidgetBuilder, Widget} from './framework'
 
+export abstract class SliverChildDelegate {}
+
 export type SemanticIndexCallback = (
   widget: Widget,
   localIndex: number
@@ -12,7 +14,10 @@ export type ChildIndexGetter = (key: Key) => number | null | undefined
 
 const _kDefaultSemanticIndexCallback = (_, localIndex) => localIndex
 
-export class SliverChildListDelegate extends N.SliverChildListDelegate {
+export class SliverChildListDelegate
+  extends N.SliverChildListDelegate
+  implements SliverChildDelegate
+{
   constructor(
     children: Array<Widget>,
     args?: {
@@ -46,7 +51,10 @@ export class SliverChildListDelegate extends N.SliverChildListDelegate {
 //     _._keyToIndex = t6;
 //   },
 
-export class SliverChildBuilderDelegate extends N.SliverChildBuilderDelegate {
+export class SliverChildBuilderDelegate
+  extends N.SliverChildBuilderDelegate
+  implements SliverChildDelegate
+{
   constructor(
     builder: NullableIndexedWidgetBuilder,
     args?: {
@@ -86,10 +94,6 @@ export class SliverChildBuilderDelegate extends N.SliverChildBuilderDelegate {
 //     _.semanticIndexCallback = t6;
 //     _.findChildIndexCallback = t7;
 //   },
-
-export type SliverChildDelegate =
-  | SliverChildBuilderDelegate
-  | SliverChildListDelegate
 
 export class SliverList extends N.SliverList {
   constructor(args: {key?: Key; delegate: SliverChildDelegate}) {
